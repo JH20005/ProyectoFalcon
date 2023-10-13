@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using proyectoFalcon.Utils;
 
 namespace proyectoFalcon
@@ -10,11 +11,37 @@ namespace proyectoFalcon
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            ConexionBD.conectarBD();
-            Application.Run(new Login());
+            try
+            {
+                // To customize application configuration such as set high DPI settings or default font,
+                // see https://aka.ms/applicationconfiguration.
+                ApplicationConfiguration.Initialize();
+                initConexion();
+                Application.Run(new Login());
+            }
+            catch(Exception ex)
+            {
+                Mensaje.showError("No se puede iniciar la aplicación - " + ex.Message);
+            }
+
+        }
+
+        static void initConexion()
+        {
+            try
+            {
+                ConexionBD.conectarBD();
+                ConexionBD.openConexion();
+                
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConexionBD.closeConexion();
+            }
         }
     }
 }

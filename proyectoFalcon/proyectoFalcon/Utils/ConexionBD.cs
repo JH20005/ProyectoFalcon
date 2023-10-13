@@ -29,6 +29,10 @@ namespace proyectoFalcon.Utils
 
         public static MySqlConnection openConexion()
         {
+            if(conexion.State != 0)
+            {
+                closeConexion();
+            }
             conexion.Open();
             return conexion;
         }

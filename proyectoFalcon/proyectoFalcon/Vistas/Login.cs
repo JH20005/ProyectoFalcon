@@ -17,15 +17,12 @@ namespace proyectoFalcon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (existeUsuario())
+            existeUsuario();
+            if (Sesion.getUsuarioLogueado() != null)
             {
-                MessageBox.Show("Usuario Existe");
+                //TODO: Ir a pantalla principal
+                Mensaje.showInfo("Bienvenido: " + Sesion.getUsuarioLogueado().username);
             }
-            else
-            {
-                MessageBox.Show("Usuario No existe");
-            }
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,9 +43,9 @@ namespace proyectoFalcon
 
         }
 
-        private bool existeUsuario()
+        private void existeUsuario()
         {
-            return Usuario.validarUsuario(txtUsername.Text, txtPassword.Text);
+           Usuario.validarUsuario(txtUsername.Text, txtPassword.Text);
         }
 
     }
