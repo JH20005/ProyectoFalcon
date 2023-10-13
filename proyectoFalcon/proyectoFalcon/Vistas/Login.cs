@@ -1,15 +1,19 @@
+using proyectoFalcon.Models;
 using proyectoFalcon.Properties.Usuario;
+using proyectoFalcon.Utils;
 using System.Data.SqlClient;
 
 namespace proyectoFalcon
 {
     public partial class Login : Form
     {
+
+
         public Login()
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection("server=localhost;database=falcon; integrated security = true");
+        //SqlConnection conn = new SqlConnection("server=localhost;database=falcon; integrated security = true");
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -44,27 +48,7 @@ namespace proyectoFalcon
 
         private bool existeUsuario()
         {
-            bool usuarioExiste = false;
-
-            {
-                conn.Open();
-
-                string sql = "SELECT usuario, contrasenia FROM usuarios WHERE usuario = @usuario AND contrasenia = @contrasenia";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@usuario", textBox1.Text);
-                cmd.Parameters.AddWithValue("@contrasenia", txtPassword.Text);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    usuarioExiste = true;
-                }
-         
-                conn.Close();
-            }
-
-            return usuarioExiste;
+            return Usuario.validarUsuario(txtUsername.Text, txtPassword.Text);
         }
 
     }

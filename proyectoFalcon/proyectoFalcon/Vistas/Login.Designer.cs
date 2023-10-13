@@ -31,13 +31,12 @@
         {
             button1 = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtUsername = new TextBox();
             label2 = new Label();
             label3 = new Label();
             panel1 = new Panel();
             txtPassword = new TextBox();
             button2 = new Button();
-            txtPassword.PasswordChar = '*';
             SuspendLayout();
             // 
             // button1
@@ -66,14 +65,14 @@
             label1.Text = "LOGIN";
             label1.Click += label1_Click;
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(52, 154);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(229, 31);
-            textBox1.TabIndex = 2;
+            txtUsername.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.Location = new Point(52, 154);
+            txtUsername.Margin = new Padding(4, 5, 4, 5);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(229, 31);
+            txtUsername.TabIndex = 2;
             // 
             // label2
             // 
@@ -112,6 +111,7 @@
             txtPassword.Location = new Point(52, 267);
             txtPassword.Margin = new Padding(4, 5, 4, 5);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(236, 31);
             txtPassword.TabIndex = 6;
             // 
@@ -129,7 +129,7 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // Form1
+            // Login
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -139,12 +139,12 @@
             Controls.Add(panel1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsername);
             Controls.Add(label1);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 5, 4, 5);
-            Name = "Form1";
+            Name = "Login";
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
@@ -154,7 +154,7 @@
 
         private Button button1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtUsername;
         private Label label2;
         private Label label3;
         private Panel panel1;

@@ -16,3 +16,25 @@ C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\ProyectoToo\proyecto
 C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\ProyectoToo\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Resources.resources
 C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\ProyectoToo\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Login.resources
 C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\ProyectoToo\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Usuario.NuevoUsuario.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.AssemblyReference.cache
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.dll
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\refint\proyectoFalcon.dll
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.pdb
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.exe
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.deps.json
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.runtimeconfig.json
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.dll
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.pdb
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\MySql.Data.dll
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\MySql.Data.xml
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Resources.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Login.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Usuario.NuevoUsuario.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.GenerateResource.cache
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.AssemblyInfoInputs.cache
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.AssemblyInfo.cs
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.CoreCompileInputs.cache
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.CopyComplete
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.genruntimeconfig.cache
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\ref\proyectoFalcon.dll
