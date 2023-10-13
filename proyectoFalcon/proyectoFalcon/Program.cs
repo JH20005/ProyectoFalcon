@@ -1,3 +1,5 @@
+using proyectoFalcon.Utils;
+
 namespace proyectoFalcon
 {
     internal static class Program
@@ -11,6 +13,7 @@ namespace proyectoFalcon
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            ConexionBD.conectarBD();
             Application.Run(new Login());
         }
     }
