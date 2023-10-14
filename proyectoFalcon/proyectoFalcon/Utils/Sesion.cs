@@ -10,7 +10,7 @@ namespace proyectoFalcon.Utils
     public class Sesion
     {
 
-        private static Usuario usuarioLogueado;
+        private static Usuario? usuarioLogueado;
 
         public static void setUsuarioLogueado(Usuario usuario)
         {

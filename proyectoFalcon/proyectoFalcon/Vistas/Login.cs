@@ -1,6 +1,7 @@
 using proyectoFalcon.Models;
 using proyectoFalcon.Properties.Usuario;
 using proyectoFalcon.Utils;
+using proyectoFalcon.Vistas;
 using System.Data.SqlClient;
 
 namespace proyectoFalcon
@@ -20,8 +21,10 @@ namespace proyectoFalcon
             existeUsuario();
             if (Sesion.getUsuarioLogueado() != null)
             {
-                //TODO: Ir a pantalla principal
-                Mensaje.showInfo("Bienvenido: " + Sesion.getUsuarioLogueado().username);
+                this.Hide();
+                Principal formPrincipal = new Principal();
+                formPrincipal.FormClosed += (s, args) => this.Close();
+                formPrincipal.Show();
             }
         }
 
@@ -45,8 +48,19 @@ namespace proyectoFalcon
 
         private void existeUsuario()
         {
-           Usuario.validarUsuario(txtUsername.Text, txtPassword.Text);
+            Usuario.validarUsuario(txtUsername.Text, txtPassword.Text);
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (AppDialog cerrarApp = new AppDialog("¿Desea salir de la aplicación?"))
+            {
+                DialogResult result = cerrarApp.ShowDialog();
+                if(result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+        }
     }
 }

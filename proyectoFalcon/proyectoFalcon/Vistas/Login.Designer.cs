@@ -37,14 +37,17 @@
             panel1 = new Panel();
             txtPassword = new TextBox();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(255, 128, 128);
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(178, 336);
+            button1.Location = new Point(27, 299);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(146, 35);
@@ -57,12 +60,12 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(129, 54);
+            label1.Location = new Point(97, 48);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(69, 28);
+            label1.Size = new Size(151, 28);
             label1.TabIndex = 1;
-            label1.Text = "LOGIN";
+            label1.Text = "INICIAR SESIÓN";
             label1.Click += label1_Click;
             // 
             // txtUsername
@@ -78,7 +81,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(52, 237);
+            label2.Location = new Point(52, 210);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(101, 25);
@@ -102,13 +105,13 @@
             panel1.Location = new Point(348, 1);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(329, 412);
+            panel1.Size = new Size(329, 424);
             panel1.TabIndex = 5;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPassword.Location = new Point(52, 267);
+            txtPassword.Location = new Point(52, 240);
             txtPassword.Margin = new Padding(4, 5, 4, 5);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -118,9 +121,11 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(255, 128, 128);
+            button2.Cursor = Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(24, 336);
+            button2.Location = new Point(181, 299);
             button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
             button2.Size = new Size(146, 35);
@@ -129,11 +134,29 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.DarkGray;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.Control;
+            button3.Location = new Point(102, 361);
+            button3.Margin = new Padding(4, 5, 4, 5);
+            button3.Name = "button3";
+            button3.Size = new Size(146, 35);
+            button3.TabIndex = 8;
+            button3.Text = "SALIR";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(670, 417);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(txtPassword);
             Controls.Add(panel1);
@@ -143,8 +166,10 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
@@ -160,5 +185,6 @@
         private Panel panel1;
         private TextBox txtPassword;
         private Button button2;
+        private Button button3;
     }
 }

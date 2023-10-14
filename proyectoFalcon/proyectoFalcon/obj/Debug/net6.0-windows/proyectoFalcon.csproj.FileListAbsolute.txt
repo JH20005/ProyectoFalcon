@@ -38,3 +38,6 @@ D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windo
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.CopyComplete
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.genruntimeconfig.cache
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\ref\proyectoFalcon.dll
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Principal.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.AppDialog.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.AppMessage.resources

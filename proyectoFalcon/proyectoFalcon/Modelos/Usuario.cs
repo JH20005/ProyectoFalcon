@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using proyectoFalcon.Modelos;
 using proyectoFalcon.Utils;
 
 namespace proyectoFalcon.Models
@@ -16,18 +17,27 @@ namespace proyectoFalcon.Models
         public string password {  get; set; }
         public int tipo { get; set; }
 
+        public Rol rol { get; set; }
+
         public static void validarUsuario(string username, string password)
         {
             try
             {
                 MySqlConnection conexion = ConexionBD.openConexion();
 
-                string sql = "SELECT username, password, tipo FROM usuarios WHERE username = @usuario";
-                MySqlCommand cmd = new MySqlCommand(sql, conexion);
+                //string sql = "SELECT username, password, tipo FROM usuarios WHERE username = @usuario";
+                StringBuilder query = new StringBuilder();
+                query.Append("SELECT u.username, u.password, u.idrol, r.descripcion ");
+                query.Append("FROM usuarios u ");
+                query.Append("INNER JOIN roles r ");
+                query.Append("ON u.idrol = r.idrol ");
+                query.Append("WHERE username = @usuario");
+                MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
                 cmd.Parameters.AddWithValue("@usuario", username);
-                cmd.Parameters.AddWithValue("@contrasenia", password);
+
                 MySqlDataReader reader = cmd.ExecuteReader();           
                 bool existeUsuario = reader.HasRows;
+                bool passwordCorrecto = true;
                 if(!existeUsuario)
                 {
                     Mensaje.showWarning(String.Format("El usuario {0} no existe", username));
@@ -38,14 +48,18 @@ namespace proyectoFalcon.Models
                 {
                     if (!reader["password"].ToString().ToUpper().Equals(password.ToUpper()))
                     {
-                        Mensaje.showWarning(String.Format("La contraseña no es correcta para el usuario {0}", username));
-                        ConexionBD.closeConexion();
-                        return;
+                        Mensaje.showWarning(String.Format("La contraseña no es correcta para el usuario {0}", username));                     
+                        passwordCorrecto = false;
                     }
-                    Usuario usuario = new Usuario();
-                    usuario.username = reader["username"].ToString();
-                    usuario.tipo = int.Parse(reader["tipo"].ToString());
-                    Sesion.setUsuarioLogueado(usuario);
+                    if (passwordCorrecto)
+                    {
+                        Usuario usuario = new Usuario();
+                        usuario.rol = new Rol();
+                        usuario.username = reader["username"].ToString();
+                        usuario.tipo = int.Parse(reader["idrol"].ToString());
+                        usuario.rol.descripcion = reader["descripcion"].ToString();
+                        Sesion.setUsuarioLogueado(usuario);
+                    }
                 }
             }
             catch (Exception e)
