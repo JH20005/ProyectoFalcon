@@ -48,9 +48,13 @@
             pnlCerrar = new Panel();
             btnCerrarSesion = new Button();
             button1 = new Button();
+            btnCompras = new Button();
+            btnEnvios = new Button();
             sidebar.SuspendLayout();
             panel1.SuspendLayout();
             pnlMenu.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -127,27 +131,28 @@
             // 
             // panel9
             // 
-            panel9.Location = new Point(0, 378);
+            panel9.Location = new Point(0, 360);
             panel9.Name = "panel9";
             panel9.Size = new Size(245, 48);
             panel9.TabIndex = 2;
             // 
             // panel8
             // 
-            panel8.Location = new Point(0, 324);
+            panel8.Location = new Point(0, 312);
             panel8.Name = "panel8";
             panel8.Size = new Size(245, 48);
             panel8.TabIndex = 1;
             // 
             // panel7
             // 
-            panel7.Location = new Point(0, 270);
+            panel7.Location = new Point(0, 264);
             panel7.Name = "panel7";
             panel7.Size = new Size(245, 48);
             panel7.TabIndex = 1;
             // 
             // panel6
             // 
+            panel6.Controls.Add(btnEnvios);
             panel6.Location = new Point(0, 216);
             panel6.Name = "panel6";
             panel6.Size = new Size(245, 48);
@@ -155,6 +160,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(btnCompras);
             panel5.Location = new Point(0, 162);
             panel5.Name = "panel5";
             panel5.Size = new Size(245, 48);
@@ -284,6 +290,42 @@
             button1.MouseLeave += button1_MouseLeave;
             button1.MouseMove += button1_MouseMove;
             // 
+            // btnCompras
+            // 
+            btnCompras.Cursor = Cursors.Hand;
+            btnCompras.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnCompras.FlatStyle = FlatStyle.Flat;
+            btnCompras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCompras.ForeColor = Color.White;
+            btnCompras.Image = Properties.Resources.menu_compras;
+            btnCompras.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCompras.Location = new Point(-3, 0);
+            btnCompras.Name = "btnCompras";
+            btnCompras.Size = new Size(261, 48);
+            btnCompras.TabIndex = 3;
+            btnCompras.Text = "Compras y cotizaciones";
+            btnCompras.TextAlign = ContentAlignment.MiddleLeft;
+            btnCompras.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCompras.UseVisualStyleBackColor = true;
+            // 
+            // btnEnvios
+            // 
+            btnEnvios.Cursor = Cursors.Hand;
+            btnEnvios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnEnvios.FlatStyle = FlatStyle.Flat;
+            btnEnvios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEnvios.ForeColor = Color.White;
+            btnEnvios.Image = Properties.Resources.menu_envios;
+            btnEnvios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEnvios.Location = new Point(-3, -3);
+            btnEnvios.Name = "btnEnvios";
+            btnEnvios.Size = new Size(261, 48);
+            btnEnvios.TabIndex = 4;
+            btnEnvios.Text = "Envíos y seguimiento";
+            btnEnvios.TextAlign = ContentAlignment.MiddleLeft;
+            btnEnvios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEnvios.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -298,6 +340,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pnlMenu.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -327,5 +371,8 @@
         private Button btnUsuarios;
         private Panel panel2;
         private Button btnVehiculos;
+        private Button button4;
+        private Button btnEnvios;
+        private Button btnCompras;
     }
 }
