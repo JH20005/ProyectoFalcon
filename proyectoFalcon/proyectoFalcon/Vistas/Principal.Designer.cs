@@ -33,15 +33,27 @@
             lblRol = new Label();
             lblNombres = new Label();
             label1 = new Label();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            panel4 = new Panel();
+            pnlMenu = new Panel();
+            panel9 = new Panel();
+            panel8 = new Panel();
+            panel7 = new Panel();
+            panel6 = new Panel();
             panel5 = new Panel();
+            panel4 = new Panel();
+            btnVehiculos = new Button();
+            panel3 = new Panel();
+            btnUsuarios = new Button();
+            panel2 = new Panel();
+            btnInicio = new Button();
             pnlCerrar = new Panel();
             btnCerrarSesion = new Button();
             button1 = new Button();
             sidebar.SuspendLayout();
             panel1.SuspendLayout();
+            pnlMenu.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
             pnlCerrar.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,10 +61,7 @@
             // 
             sidebar.BackColor = Color.FromArgb(255, 128, 128);
             sidebar.Controls.Add(panel1);
-            sidebar.Controls.Add(panel2);
-            sidebar.Controls.Add(panel3);
-            sidebar.Controls.Add(panel4);
-            sidebar.Controls.Add(panel5);
+            sidebar.Controls.Add(pnlMenu);
             sidebar.Controls.Add(pnlCerrar);
             sidebar.Location = new Point(-2, -2);
             sidebar.Name = "sidebar";
@@ -101,41 +110,141 @@
             label1.TabIndex = 0;
             label1.Text = "Bienvenido/a";
             // 
-            // panel2
+            // pnlMenu
             // 
-            panel2.Location = new Point(3, 117);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(245, 38);
-            panel2.TabIndex = 1;
+            pnlMenu.Controls.Add(panel9);
+            pnlMenu.Controls.Add(panel8);
+            pnlMenu.Controls.Add(panel7);
+            pnlMenu.Controls.Add(panel6);
+            pnlMenu.Controls.Add(panel5);
+            pnlMenu.Controls.Add(panel4);
+            pnlMenu.Controls.Add(panel3);
+            pnlMenu.Controls.Add(panel2);
+            pnlMenu.Location = new Point(3, 117);
+            pnlMenu.Name = "pnlMenu";
+            pnlMenu.Size = new Size(245, 440);
+            pnlMenu.TabIndex = 1;
             // 
-            // panel3
+            // panel9
             // 
-            panel3.Location = new Point(3, 161);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(245, 38);
-            panel3.TabIndex = 2;
+            panel9.Location = new Point(0, 378);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(245, 48);
+            panel9.TabIndex = 2;
             // 
-            // panel4
+            // panel8
             // 
-            panel4.Location = new Point(3, 205);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(245, 38);
-            panel4.TabIndex = 3;
+            panel8.Location = new Point(0, 324);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(245, 48);
+            panel8.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            panel7.Location = new Point(0, 270);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(245, 48);
+            panel7.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            panel6.Location = new Point(0, 216);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(245, 48);
+            panel6.TabIndex = 1;
             // 
             // panel5
             // 
-            panel5.Location = new Point(3, 249);
+            panel5.Location = new Point(0, 162);
             panel5.Name = "panel5";
-            panel5.Size = new Size(245, 38);
-            panel5.TabIndex = 2;
+            panel5.Size = new Size(245, 48);
+            panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnVehiculos);
+            panel4.Location = new Point(0, 108);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(245, 48);
+            panel4.TabIndex = 1;
+            // 
+            // btnVehiculos
+            // 
+            btnVehiculos.Cursor = Cursors.Hand;
+            btnVehiculos.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnVehiculos.FlatStyle = FlatStyle.Flat;
+            btnVehiculos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVehiculos.ForeColor = Color.White;
+            btnVehiculos.Image = Properties.Resources.menu_vehiculos;
+            btnVehiculos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVehiculos.Location = new Point(-3, 0);
+            btnVehiculos.Name = "btnVehiculos";
+            btnVehiculos.Size = new Size(261, 48);
+            btnVehiculos.TabIndex = 2;
+            btnVehiculos.Text = "Vehiculos";
+            btnVehiculos.TextAlign = ContentAlignment.MiddleLeft;
+            btnVehiculos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnVehiculos.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(btnUsuarios);
+            panel3.Location = new Point(0, 54);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(245, 48);
+            panel3.TabIndex = 1;
+            // 
+            // btnUsuarios
+            // 
+            btnUsuarios.Cursor = Cursors.Hand;
+            btnUsuarios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnUsuarios.FlatStyle = FlatStyle.Flat;
+            btnUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUsuarios.ForeColor = Color.White;
+            btnUsuarios.Image = Properties.Resources.menu_usuarios;
+            btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.Location = new Point(-3, 0);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Size = new Size(261, 48);
+            btnUsuarios.TabIndex = 1;
+            btnUsuarios.Text = "Usuarios";
+            btnUsuarios.TextAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btnInicio);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(245, 48);
+            panel2.TabIndex = 0;
+            // 
+            // btnInicio
+            // 
+            btnInicio.Cursor = Cursors.Hand;
+            btnInicio.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnInicio.FlatStyle = FlatStyle.Flat;
+            btnInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnInicio.ForeColor = Color.White;
+            btnInicio.Image = Properties.Resources.menu_inicio;
+            btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInicio.Location = new Point(-3, 0);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(261, 48);
+            btnInicio.TabIndex = 0;
+            btnInicio.Text = "Inicio";
+            btnInicio.TextAlign = ContentAlignment.MiddleLeft;
+            btnInicio.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnInicio.UseVisualStyleBackColor = true;
             // 
             // pnlCerrar
             // 
             pnlCerrar.Controls.Add(btnCerrarSesion);
             pnlCerrar.Controls.Add(button1);
-            pnlCerrar.Location = new Point(3, 293);
+            pnlCerrar.Location = new Point(3, 563);
             pnlCerrar.Name = "pnlCerrar";
-            pnlCerrar.Size = new Size(245, 311);
+            pnlCerrar.Size = new Size(245, 339);
             pnlCerrar.TabIndex = 4;
             // 
             // btnCerrarSesion
@@ -145,7 +254,7 @@
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrarSesion.ForeColor = SystemColors.Control;
-            btnCerrarSesion.Location = new Point(84, 262);
+            btnCerrarSesion.Location = new Point(93, 3);
             btnCerrarSesion.Margin = new Padding(4, 5, 4, 5);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(145, 32);
@@ -163,7 +272,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(11, 262);
+            button1.Location = new Point(4, 3);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(62, 32);
@@ -188,6 +297,10 @@
             sidebar.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            pnlMenu.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             pnlCerrar.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -199,12 +312,20 @@
         private Label lblNombres;
         private Label label1;
         private Label lblRol;
-        private Panel panel2;
-        private Panel panel3;
-        private Panel panel4;
-        private Panel panel5;
+        private Panel pnlMenu;
         private Panel pnlCerrar;
         private Button button1;
         private Button btnCerrarSesion;
+        private Button btnInicio;
+        private Panel panel9;
+        private Panel panel8;
+        private Panel panel7;
+        private Panel panel6;
+        private Panel panel5;
+        private Panel panel4;
+        private Panel panel3;
+        private Button btnUsuarios;
+        private Panel panel2;
+        private Button btnVehiculos;
     }
 }
