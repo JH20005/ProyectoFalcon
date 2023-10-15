@@ -7,6 +7,15 @@
     <Compile Update="Vistas\AppMessage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vistas\ComprarCotizar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vistas\EnvioSeguimiento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vistas\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Vistas\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -15,6 +24,12 @@
     </Compile>
     <Compile Update="Vistas\Principal.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vistas\Vehiculos.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using proyectoFalcon.Modelos;
+using proyectoFalcon.Properties;
 using proyectoFalcon.Utils;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace proyectoFalcon.Vistas
 {
@@ -26,8 +27,10 @@ namespace proyectoFalcon.Vistas
         {
             try
             {
-                sidebar.Controls.Add(new Button());
+                initMenu();
+                pnlMenu.Controls.Clear();
                 MySqlConnection conexion = ConexionBD.openConexion();
+                List<int> permisos = new List<int>();
 
                 //string sql = "SELECT username, password, tipo FROM usuarios WHERE username = @usuario";
                 StringBuilder query = new StringBuilder();
@@ -42,7 +45,38 @@ namespace proyectoFalcon.Vistas
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-
+                    permisos.Add(int.Parse(reader["idmenu"].ToString()));
+                }
+                foreach (var permiso in permisos)
+                {
+                    pnlMenu.Controls.Add(Menu.getPanel(permiso));
+                }
+                switch (Sesion.getUsuarioLogueado().tipo)
+                {
+                    case 10:
+                        {
+                            appPanel.Controls.Clear();
+                            reiniciarSidebar();
+                            btnInicio.Image = Resources.menu_inicio_selected;
+                            btnInicio.BackColor = Estilos.getSecundario();
+                            btnInicio.ForeColor = Estilos.getPrimario();
+                            showPantalla(new Home());
+                            break;
+                        }
+                    case 20:
+                        {
+                            appPanel.Controls.Clear();
+                            reiniciarSidebar();
+                            btnCompras.Image = Resources.menu_compras_selected;
+                            btnCompras.BackColor = Estilos.getSecundario();
+                            btnCompras.ForeColor = Estilos.getPrimario();
+                            showPantalla(new ComprarCotizar());
+                            break;
+                        }
+                    case 30:
+                        {
+                            break;
+                        }
                 }
             }
             catch (Exception ex)
@@ -56,10 +90,50 @@ namespace proyectoFalcon.Vistas
 
         }
 
+        public void initMenu()
+        {
+            Menu.clearMenus();
+            Menu.addMenu(10, this.pnlInicio);
+            Menu.addMenu(20, this.pnlUsuarios);
+            Menu.addMenu(30, this.pnlVehiculos);
+            Menu.addMenu(40, this.pnlCompras);
+            Menu.addMenu(50, this.pnlEnvios);
+        }
+
+        private void showPantalla(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            appPanel.Controls.Add(userControl);
+            userControl.Show();
+        }
+
+        private void reiniciarSidebar()
+        {
+            btnInicio.Image = Resources.menu_inicio;
+            btnInicio.BackColor = Estilos.getPrimario();
+            btnInicio.ForeColor = Estilos.getSecundario();
+
+            btnUsuarios.Image = Resources.menu_usuarios;
+            btnUsuarios.BackColor = Estilos.getPrimario();
+            btnUsuarios.ForeColor = Estilos.getSecundario();
+
+            btnVehiculos.Image = Resources.menu_vehiculos;
+            btnVehiculos.BackColor = Estilos.getPrimario();
+            btnVehiculos.ForeColor = Estilos.getSecundario();
+
+            btnEnvios.Image = Resources.menu_envios;
+            btnEnvios.BackColor = Estilos.getPrimario();
+            btnEnvios.ForeColor = Estilos.getSecundario();
+
+            btnCompras.Image = Resources.menu_compras;
+            btnCompras.BackColor = Estilos.getPrimario();
+            btnCompras.ForeColor = Estilos.getSecundario();
+        }
+
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            button1.BackColor = Color.White;
-            button1.ForeColor = Color.FromArgb(255, 128, 128);
+            button1.BackColor = Estilos.getSecundario();
+            button1.ForeColor = Estilos.getPrimario() ;
         }
 
         private void button1_MouseMove(object sender, MouseEventArgs e)
@@ -69,8 +143,8 @@ namespace proyectoFalcon.Vistas
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.White;
-            button1.BackColor = Color.FromArgb(255, 128, 128);
+            button1.ForeColor = Estilos.getSecundario() ;
+            button1.BackColor = Estilos.getPrimario();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -126,6 +200,56 @@ namespace proyectoFalcon.Vistas
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnInicio.Image = Resources.menu_inicio_selected;
+            btnInicio.BackColor = Estilos.getSecundario();
+            btnInicio.ForeColor = Estilos.getPrimario();
+            showPantalla(new Home());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnUsuarios.Image = Resources.menu_usuarios_selected;
+            btnUsuarios.BackColor = Estilos.getSecundario();
+            btnUsuarios.ForeColor = Estilos.getPrimario();
+            showPantalla(new Usuarios());
+        }
+
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnVehiculos.Image = Resources.menu_vehiculos_selected;
+            btnVehiculos.BackColor = Estilos.getSecundario();
+            btnVehiculos.ForeColor = Estilos.getPrimario();
+            showPantalla(new Vehiculos());
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnCompras.Image = Resources.menu_compras_selected;
+            btnCompras.BackColor = Estilos.getSecundario();
+            btnCompras.ForeColor = Estilos.getPrimario();
+            showPantalla(new ComprarCotizar());
+        }
+
+        private void btnEnvios_Click(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnEnvios.Image = Resources.menu_envios_selected;
+            btnEnvios.BackColor = Estilos.getSecundario();
+            btnEnvios.ForeColor = Estilos.getPrimario();
+            showPantalla(new EnvioSeguimiento());
         }
     }
 }

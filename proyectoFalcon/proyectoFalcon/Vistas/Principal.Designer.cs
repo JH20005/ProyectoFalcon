@@ -33,31 +33,31 @@
             lblRol = new Label();
             lblNombres = new Label();
             label1 = new Label();
-            pnlMenu = new Panel();
-            panel9 = new Panel();
-            panel8 = new Panel();
-            panel7 = new Panel();
-            panel6 = new Panel();
-            panel5 = new Panel();
-            panel4 = new Panel();
-            btnVehiculos = new Button();
-            panel3 = new Panel();
-            btnUsuarios = new Button();
-            panel2 = new Panel();
+            pnlMenu = new FlowLayoutPanel();
+            pnlInicio = new Panel();
             btnInicio = new Button();
+            pnlUsuarios = new Panel();
+            btnUsuarios = new Button();
+            pnlVehiculos = new Panel();
+            btnVehiculos = new Button();
+            pnlCompras = new Panel();
+            btnCompras = new Button();
+            pnlEnvios = new Panel();
+            btnEnvios = new Button();
+            panel7 = new Panel();
+            panel8 = new Panel();
             pnlCerrar = new Panel();
             btnCerrarSesion = new Button();
             button1 = new Button();
-            btnCompras = new Button();
-            btnEnvios = new Button();
+            appPanel = new Panel();
             sidebar.SuspendLayout();
             panel1.SuspendLayout();
             pnlMenu.SuspendLayout();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
+            pnlInicio.SuspendLayout();
+            pnlUsuarios.SuspendLayout();
+            pnlVehiculos.SuspendLayout();
+            pnlCompras.SuspendLayout();
+            pnlEnvios.SuspendLayout();
             pnlCerrar.SuspendLayout();
             SuspendLayout();
             // 
@@ -116,115 +116,25 @@
             // 
             // pnlMenu
             // 
-            pnlMenu.Controls.Add(panel9);
-            pnlMenu.Controls.Add(panel8);
+            pnlMenu.Controls.Add(pnlInicio);
+            pnlMenu.Controls.Add(pnlUsuarios);
+            pnlMenu.Controls.Add(pnlVehiculos);
+            pnlMenu.Controls.Add(pnlCompras);
+            pnlMenu.Controls.Add(pnlEnvios);
             pnlMenu.Controls.Add(panel7);
-            pnlMenu.Controls.Add(panel6);
-            pnlMenu.Controls.Add(panel5);
-            pnlMenu.Controls.Add(panel4);
-            pnlMenu.Controls.Add(panel3);
-            pnlMenu.Controls.Add(panel2);
+            pnlMenu.Controls.Add(panel8);
             pnlMenu.Location = new Point(3, 117);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new Size(245, 440);
+            pnlMenu.Size = new Size(245, 386);
             pnlMenu.TabIndex = 1;
             // 
-            // panel9
+            // pnlInicio
             // 
-            panel9.Location = new Point(0, 360);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(245, 48);
-            panel9.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            panel8.Location = new Point(0, 312);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(245, 48);
-            panel8.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            panel7.Location = new Point(0, 264);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(245, 48);
-            panel7.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(btnEnvios);
-            panel6.Location = new Point(0, 216);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(245, 48);
-            panel6.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(btnCompras);
-            panel5.Location = new Point(0, 162);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(245, 48);
-            panel5.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(btnVehiculos);
-            panel4.Location = new Point(0, 108);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(245, 48);
-            panel4.TabIndex = 1;
-            // 
-            // btnVehiculos
-            // 
-            btnVehiculos.Cursor = Cursors.Hand;
-            btnVehiculos.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
-            btnVehiculos.FlatStyle = FlatStyle.Flat;
-            btnVehiculos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnVehiculos.ForeColor = Color.White;
-            btnVehiculos.Image = Properties.Resources.menu_vehiculos;
-            btnVehiculos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVehiculos.Location = new Point(-3, 0);
-            btnVehiculos.Name = "btnVehiculos";
-            btnVehiculos.Size = new Size(261, 48);
-            btnVehiculos.TabIndex = 2;
-            btnVehiculos.Text = "Vehiculos";
-            btnVehiculos.TextAlign = ContentAlignment.MiddleLeft;
-            btnVehiculos.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnVehiculos.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(btnUsuarios);
-            panel3.Location = new Point(0, 54);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(245, 48);
-            panel3.TabIndex = 1;
-            // 
-            // btnUsuarios
-            // 
-            btnUsuarios.Cursor = Cursors.Hand;
-            btnUsuarios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
-            btnUsuarios.FlatStyle = FlatStyle.Flat;
-            btnUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUsuarios.ForeColor = Color.White;
-            btnUsuarios.Image = Properties.Resources.menu_usuarios;
-            btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsuarios.Location = new Point(-3, 0);
-            btnUsuarios.Name = "btnUsuarios";
-            btnUsuarios.Size = new Size(261, 48);
-            btnUsuarios.TabIndex = 1;
-            btnUsuarios.Text = "Usuarios";
-            btnUsuarios.TextAlign = ContentAlignment.MiddleLeft;
-            btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnUsuarios.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(btnInicio);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(245, 48);
-            panel2.TabIndex = 0;
+            pnlInicio.Controls.Add(btnInicio);
+            pnlInicio.Location = new Point(3, 3);
+            pnlInicio.Name = "pnlInicio";
+            pnlInicio.Size = new Size(245, 48);
+            pnlInicio.TabIndex = 0;
             // 
             // btnInicio
             // 
@@ -237,20 +147,143 @@
             btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
             btnInicio.Location = new Point(-3, 0);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(261, 48);
+            btnInicio.Size = new Size(267, 48);
             btnInicio.TabIndex = 0;
             btnInicio.Text = "Inicio";
             btnInicio.TextAlign = ContentAlignment.MiddleLeft;
             btnInicio.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnInicio.UseVisualStyleBackColor = true;
+            btnInicio.Click += btnInicio_Click;
+            // 
+            // pnlUsuarios
+            // 
+            pnlUsuarios.Controls.Add(btnUsuarios);
+            pnlUsuarios.Location = new Point(3, 57);
+            pnlUsuarios.Name = "pnlUsuarios";
+            pnlUsuarios.Size = new Size(245, 48);
+            pnlUsuarios.TabIndex = 1;
+            // 
+            // btnUsuarios
+            // 
+            btnUsuarios.Cursor = Cursors.Hand;
+            btnUsuarios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnUsuarios.FlatStyle = FlatStyle.Flat;
+            btnUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUsuarios.ForeColor = Color.White;
+            btnUsuarios.Image = Properties.Resources.menu_usuarios;
+            btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.Location = new Point(-6, 0);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Size = new Size(261, 48);
+            btnUsuarios.TabIndex = 1;
+            btnUsuarios.Text = "Usuarios";
+            btnUsuarios.TextAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUsuarios.UseVisualStyleBackColor = true;
+            btnUsuarios.Click += btnUsuarios_Click;
+            // 
+            // pnlVehiculos
+            // 
+            pnlVehiculos.Controls.Add(btnVehiculos);
+            pnlVehiculos.Location = new Point(3, 111);
+            pnlVehiculos.Name = "pnlVehiculos";
+            pnlVehiculos.Size = new Size(245, 48);
+            pnlVehiculos.TabIndex = 1;
+            // 
+            // btnVehiculos
+            // 
+            btnVehiculos.Cursor = Cursors.Hand;
+            btnVehiculos.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnVehiculos.FlatStyle = FlatStyle.Flat;
+            btnVehiculos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVehiculos.ForeColor = Color.White;
+            btnVehiculos.Image = Properties.Resources.menu_vehiculos;
+            btnVehiculos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVehiculos.Location = new Point(-6, 0);
+            btnVehiculos.Name = "btnVehiculos";
+            btnVehiculos.Size = new Size(261, 48);
+            btnVehiculos.TabIndex = 2;
+            btnVehiculos.Text = "Vehiculos";
+            btnVehiculos.TextAlign = ContentAlignment.MiddleLeft;
+            btnVehiculos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnVehiculos.UseVisualStyleBackColor = true;
+            btnVehiculos.Click += btnVehiculos_Click;
+            // 
+            // pnlCompras
+            // 
+            pnlCompras.Controls.Add(btnCompras);
+            pnlCompras.Location = new Point(3, 165);
+            pnlCompras.Name = "pnlCompras";
+            pnlCompras.Size = new Size(245, 48);
+            pnlCompras.TabIndex = 1;
+            // 
+            // btnCompras
+            // 
+            btnCompras.Cursor = Cursors.Hand;
+            btnCompras.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnCompras.FlatStyle = FlatStyle.Flat;
+            btnCompras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCompras.ForeColor = Color.White;
+            btnCompras.Image = Properties.Resources.menu_compras;
+            btnCompras.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCompras.Location = new Point(-6, -3);
+            btnCompras.Name = "btnCompras";
+            btnCompras.Size = new Size(267, 48);
+            btnCompras.TabIndex = 3;
+            btnCompras.Text = "Compras y cotizaciones";
+            btnCompras.TextAlign = ContentAlignment.MiddleLeft;
+            btnCompras.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCompras.UseVisualStyleBackColor = true;
+            btnCompras.Click += btnCompras_Click;
+            // 
+            // pnlEnvios
+            // 
+            pnlEnvios.Controls.Add(btnEnvios);
+            pnlEnvios.Location = new Point(3, 219);
+            pnlEnvios.Name = "pnlEnvios";
+            pnlEnvios.Size = new Size(245, 48);
+            pnlEnvios.TabIndex = 1;
+            // 
+            // btnEnvios
+            // 
+            btnEnvios.Cursor = Cursors.Hand;
+            btnEnvios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnEnvios.FlatStyle = FlatStyle.Flat;
+            btnEnvios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEnvios.ForeColor = Color.White;
+            btnEnvios.Image = Properties.Resources.menu_envios;
+            btnEnvios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEnvios.Location = new Point(-6, 0);
+            btnEnvios.Name = "btnEnvios";
+            btnEnvios.Size = new Size(267, 48);
+            btnEnvios.TabIndex = 4;
+            btnEnvios.Text = "Envíos y seguimiento";
+            btnEnvios.TextAlign = ContentAlignment.MiddleLeft;
+            btnEnvios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEnvios.UseVisualStyleBackColor = true;
+            btnEnvios.Click += btnEnvios_Click;
+            // 
+            // panel7
+            // 
+            panel7.Location = new Point(3, 273);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(248, 48);
+            panel7.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            panel8.Location = new Point(3, 327);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(251, 48);
+            panel8.TabIndex = 1;
             // 
             // pnlCerrar
             // 
             pnlCerrar.Controls.Add(btnCerrarSesion);
             pnlCerrar.Controls.Add(button1);
-            pnlCerrar.Location = new Point(3, 563);
+            pnlCerrar.Location = new Point(3, 509);
             pnlCerrar.Name = "pnlCerrar";
-            pnlCerrar.Size = new Size(245, 339);
+            pnlCerrar.Size = new Size(245, 94);
             pnlCerrar.TabIndex = 4;
             // 
             // btnCerrarSesion
@@ -260,7 +293,7 @@
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrarSesion.ForeColor = SystemColors.Control;
-            btnCerrarSesion.Location = new Point(93, 3);
+            btnCerrarSesion.Location = new Point(84, 46);
             btnCerrarSesion.Margin = new Padding(4, 5, 4, 5);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(145, 32);
@@ -278,7 +311,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(4, 3);
+            button1.Location = new Point(11, 46);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(62, 32);
@@ -290,47 +323,20 @@
             button1.MouseLeave += button1_MouseLeave;
             button1.MouseMove += button1_MouseMove;
             // 
-            // btnCompras
+            // appPanel
             // 
-            btnCompras.Cursor = Cursors.Hand;
-            btnCompras.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
-            btnCompras.FlatStyle = FlatStyle.Flat;
-            btnCompras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCompras.ForeColor = Color.White;
-            btnCompras.Image = Properties.Resources.menu_compras;
-            btnCompras.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCompras.Location = new Point(-3, 0);
-            btnCompras.Name = "btnCompras";
-            btnCompras.Size = new Size(261, 48);
-            btnCompras.TabIndex = 3;
-            btnCompras.Text = "Compras y cotizaciones";
-            btnCompras.TextAlign = ContentAlignment.MiddleLeft;
-            btnCompras.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnCompras.UseVisualStyleBackColor = true;
-            // 
-            // btnEnvios
-            // 
-            btnEnvios.Cursor = Cursors.Hand;
-            btnEnvios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
-            btnEnvios.FlatStyle = FlatStyle.Flat;
-            btnEnvios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEnvios.ForeColor = Color.White;
-            btnEnvios.Image = Properties.Resources.menu_envios;
-            btnEnvios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEnvios.Location = new Point(-3, -3);
-            btnEnvios.Name = "btnEnvios";
-            btnEnvios.Size = new Size(261, 48);
-            btnEnvios.TabIndex = 4;
-            btnEnvios.Text = "Envíos y seguimiento";
-            btnEnvios.TextAlign = ContentAlignment.MiddleLeft;
-            btnEnvios.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEnvios.UseVisualStyleBackColor = true;
+            appPanel.Location = new Point(247, -2);
+            appPanel.Name = "appPanel";
+            appPanel.Size = new Size(794, 603);
+            appPanel.TabIndex = 1;
             // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1041, 599);
+            Controls.Add(appPanel);
             Controls.Add(sidebar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Principal";
@@ -340,11 +346,11 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pnlMenu.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel2.ResumeLayout(false);
+            pnlInicio.ResumeLayout(false);
+            pnlUsuarios.ResumeLayout(false);
+            pnlVehiculos.ResumeLayout(false);
+            pnlCompras.ResumeLayout(false);
+            pnlEnvios.ResumeLayout(false);
             pnlCerrar.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -356,23 +362,23 @@
         private Label lblNombres;
         private Label label1;
         private Label lblRol;
-        private Panel pnlMenu;
         private Panel pnlCerrar;
         private Button button1;
         private Button btnCerrarSesion;
         private Button btnInicio;
-        private Panel panel9;
         private Panel panel8;
         private Panel panel7;
-        private Panel panel6;
-        private Panel panel5;
-        private Panel panel4;
-        private Panel panel3;
+        private Panel pnlEnvios;
+        private Panel pnlCompras;
+        private Panel pnlVehiculos;
+        private Panel pnlUsuarios;
         private Button btnUsuarios;
-        private Panel panel2;
+        private Panel pnlInicio;
         private Button btnVehiculos;
         private Button button4;
         private Button btnEnvios;
         private Button btnCompras;
+        private FlowLayoutPanel pnlMenu;
+        private Panel appPanel;
     }
 }

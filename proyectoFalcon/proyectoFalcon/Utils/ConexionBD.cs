@@ -29,17 +29,17 @@ namespace proyectoFalcon.Utils
 
         public static MySqlConnection openConexion()
         {
-            if(conexion.State != 0)
-            {
-                closeConexion();
-            }
+            closeConexion();
             conexion.Open();
             return conexion;
         }
 
         public static void closeConexion()
         {
-            conexion.Close();
+            if(conexion.State != 0 )
+            {
+                conexion.Close();
+            }
         }
     }
 }

@@ -41,3 +41,8 @@ D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windo
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Principal.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.AppDialog.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.AppMessage.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Home.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Usuarios.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.ComprarCotizar.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.EnvioSeguimiento.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Vehiculos.resources
