@@ -13,11 +13,17 @@
     <Compile Update="Vistas\EnvioSeguimiento.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Vistas\GuardarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vistas\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Vistas\Login.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\MantenimientoVehiculos.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Vistas\NuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -25,10 +31,10 @@
     <Compile Update="Vistas\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Usuarios.cs">
+    <Compile Update="Vistas\MantenimientoUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Vistas\Vehiculos.cs">
+    <Compile Update="Vistas\VehiculoCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

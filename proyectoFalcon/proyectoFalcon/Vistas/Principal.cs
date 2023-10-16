@@ -32,7 +32,6 @@ namespace proyectoFalcon.Vistas
                 MySqlConnection conexion = ConexionBD.openConexion();
                 List<int> permisos = new List<int>();
 
-                //string sql = "SELECT username, password, tipo FROM usuarios WHERE username = @usuario";
                 StringBuilder query = new StringBuilder();
                 query.Append("SELECT mp.idmenu, m.descripcion, mp.idperfil ");
                 query.Append("FROM menu m ");
@@ -77,6 +76,26 @@ namespace proyectoFalcon.Vistas
                         {
                             break;
                         }
+                }
+                reader.Close();
+                if(Sesion.getUsuarioLogueado().tipo != 10)
+                {
+                    query = new StringBuilder();
+                    query.Append("SELECT p.nombre, p.apellido, p.username ");
+                    query.Append("FROM persona p ");
+                    query.Append("WHERE p.username = @username");
+                    cmd = new MySqlCommand(query.ToString(), conexion);
+                    cmd.Parameters.AddWithValue("@username", Sesion.getUsuarioLogueado().username);
+
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        lblNombres.Text = reader["nombre"].ToString() + " " + reader["apellido"].ToString();
+                    }
+                }
+                else
+                {
+                    lblNombres.Text = "Admin";
                 }
             }
             catch (Exception ex)
@@ -219,7 +238,7 @@ namespace proyectoFalcon.Vistas
             btnUsuarios.Image = Resources.menu_usuarios_selected;
             btnUsuarios.BackColor = Estilos.getSecundario();
             btnUsuarios.ForeColor = Estilos.getPrimario();
-            showPantalla(new Usuarios());
+            showPantalla(new MantenimientoUsuarios());
         }
 
         private void btnVehiculos_Click(object sender, EventArgs e)
@@ -229,7 +248,7 @@ namespace proyectoFalcon.Vistas
             btnVehiculos.Image = Resources.menu_vehiculos_selected;
             btnVehiculos.BackColor = Estilos.getSecundario();
             btnVehiculos.ForeColor = Estilos.getPrimario();
-            showPantalla(new Vehiculos());
+            showPantalla(new MantenimientoVehiculos());
         }
 
         private void btnCompras_Click(object sender, EventArgs e)

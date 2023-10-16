@@ -5,34 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using proyectoFalcon.Utils;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace proyectoFalcon.Modelos
 {
-    public class Rol
+    public class EstadosVehiculo
     {
-
-        public int idrol {  get; set; }
+        public int idestadovehiculo {  get; set; }
         public string descripcion { get; set; }
 
-        public static List<Rol> getRoles()
+        public static List<EstadosVehiculo> getEstadosVehiculo()
         {
-            List<Rol> roles = new List<Rol>();
+            List<EstadosVehiculo> estados = new List<EstadosVehiculo>();
             try
             {
                 MySqlConnection conexion = ConexionBD.openConexion();
 
                 StringBuilder query = new StringBuilder();
-                query.Append("SELECT idrol, descripcion ");
-                query.Append("FROM roles ");
+                query.Append("SELECT idestadovehiculo, descripcion ");
+                query.Append("FROM estadovehiculo ");
                 MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Rol rol = new Rol();
-                    rol.idrol = int.Parse(reader["idrol"].ToString());
-                    rol.descripcion = reader["descripcion"].ToString();
-                    roles.Add(rol);
+                    EstadosVehiculo estado = new EstadosVehiculo();
+                    estado.idestadovehiculo = int.Parse(reader["idestadovehiculo"].ToString());
+                    estado.descripcion = reader["descripcion"].ToString();
+                    estados.Add(estado);
                 }
             }
             catch (Exception ex)
@@ -43,7 +41,7 @@ namespace proyectoFalcon.Modelos
             {
                 ConexionBD.closeConexion();
             }
-            return roles;
+            return estados;
         }
     }
 }

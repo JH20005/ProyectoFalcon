@@ -51,7 +51,7 @@
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(146, 35);
-            button1.TabIndex = 0;
+            button1.TabIndex = 7;
             button1.Text = "INGRESAR";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -129,7 +129,7 @@
             button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
             button2.Size = new Size(146, 35);
-            button2.TabIndex = 7;
+            button2.TabIndex = 0;
             button2.Text = "CREAR CUENTA";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;

@@ -56,7 +56,7 @@ namespace proyectoFalcon
             using (AppDialog cerrarApp = new AppDialog("¿Desea salir de la aplicación?"))
             {
                 DialogResult result = cerrarApp.ShowDialog();
-                if(result == DialogResult.OK)
+                if (result == DialogResult.OK)
                 {
                     this.Close();
                 }

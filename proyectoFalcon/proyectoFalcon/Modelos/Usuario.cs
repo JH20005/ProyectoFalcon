@@ -25,7 +25,6 @@ namespace proyectoFalcon.Models
             {
                 MySqlConnection conexion = ConexionBD.openConexion();
 
-                //string sql = "SELECT username, password, tipo FROM usuarios WHERE username = @usuario";
                 StringBuilder query = new StringBuilder();
                 query.Append("SELECT u.username, u.password, u.idrol, r.descripcion ");
                 query.Append("FROM usuarios u ");
@@ -72,5 +71,30 @@ namespace proyectoFalcon.Models
             }
 
         }
+
+        public void guardarUsuario()
+        {
+            try
+            {
+                MySqlConnection conexion = ConexionBD.openConexion();
+                StringBuilder query = new StringBuilder();
+                query.Append("INSERT INTO usuarios (username, password, idrol)");
+                query.Append("VALUES (@username, @password, @idrol)");
+                MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@idrol", rol.idrol);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Mensaje.showError(ex.Message);
+            }
+            finally
+            {
+                ConexionBD.closeConexion();
+            }
+        }
+
     }
 }
