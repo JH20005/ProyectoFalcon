@@ -42,7 +42,10 @@
             label2 = new Label();
             label1 = new Label();
             btnSalir = new Button();
-            txtPrecio = new MaskedTextBox();
+            label7 = new Label();
+            cmbVendedor = new ComboBox();
+            label8 = new Label();
+            txtPrecio = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +58,7 @@
             btnGuardar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(209, 479);
+            btnGuardar.Location = new Point(405, 325);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(91, 33);
             btnGuardar.TabIndex = 27;
@@ -65,23 +68,24 @@
             // 
             // pbFoto
             // 
+            pbFoto.BackColor = Color.White;
             pbFoto.BorderStyle = BorderStyle.FixedSingle;
-            pbFoto.Location = new Point(149, 381);
+            pbFoto.Location = new Point(531, 227);
             pbFoto.Name = "pbFoto";
             pbFoto.Size = new Size(190, 78);
-            pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbFoto.TabIndex = 26;
             pbFoto.TabStop = false;
             // 
             // btnAdjuntar
             // 
-            btnAdjuntar.BackColor = Color.FromArgb(255, 128, 128);
+            btnAdjuntar.BackColor = Color.Maroon;
             btnAdjuntar.Cursor = Cursors.Hand;
             btnAdjuntar.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
             btnAdjuntar.FlatAppearance.BorderSize = 0;
             btnAdjuntar.FlatStyle = FlatStyle.Flat;
             btnAdjuntar.ForeColor = Color.White;
-            btnAdjuntar.Location = new Point(23, 405);
+            btnAdjuntar.Location = new Point(405, 251);
             btnAdjuntar.Name = "btnAdjuntar";
             btnAdjuntar.Size = new Size(91, 33);
             btnAdjuntar.TabIndex = 25;
@@ -95,7 +99,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(23, 381);
+            label6.Location = new Point(405, 227);
             label6.Name = "label6";
             label6.Size = new Size(44, 21);
             label6.TabIndex = 24;
@@ -104,7 +108,7 @@
             // cmbEstadosVehiculo
             // 
             cmbEstadosVehiculo.FormattingEnabled = true;
-            cmbEstadosVehiculo.Location = new Point(149, 327);
+            cmbEstadosVehiculo.Location = new Point(531, 83);
             cmbEstadosVehiculo.Name = "cmbEstadosVehiculo";
             cmbEstadosVehiculo.Size = new Size(190, 23);
             cmbEstadosVehiculo.TabIndex = 23;
@@ -135,7 +139,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(23, 325);
+            label4.Location = new Point(405, 81);
             label4.Name = "label4";
             label4.Size = new Size(61, 21);
             label4.TabIndex = 18;
@@ -183,13 +187,13 @@
             // 
             // btnSalir
             // 
-            btnSalir.BackColor = Color.Silver;
+            btnSalir.BackColor = Color.DarkGray;
             btnSalir.Cursor = Cursors.Hand;
             btnSalir.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
             btnSalir.FlatAppearance.BorderSize = 0;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(52, 479);
+            btnSalir.Location = new Point(248, 325);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(91, 33);
             btnSalir.TabIndex = 28;
@@ -197,20 +201,51 @@
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(405, 154);
+            label7.Name = "label7";
+            label7.Size = new Size(84, 21);
+            label7.TabIndex = 30;
+            label7.Text = "Vendedor";
+            // 
+            // cmbVendedor
+            // 
+            cmbVendedor.FormattingEnabled = true;
+            cmbVendedor.Location = new Point(531, 154);
+            cmbVendedor.Name = "cmbVendedor";
+            cmbVendedor.Size = new Size(190, 23);
+            cmbVendedor.TabIndex = 31;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(296, 26);
+            label8.Name = "label8";
+            label8.Size = new Size(193, 21);
+            label8.TabIndex = 32;
+            label8.Text = "Guardar nuevo vehículo";
+            // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(149, 266);
-            txtPrecio.Mask = "$999,999.00";
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(190, 23);
-            txtPrecio.TabIndex = 29;
+            txtPrecio.TabIndex = 33;
             // 
             // GuardarVehiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(355, 524);
+            BackColor = Color.Silver;
+            ClientSize = new Size(760, 383);
             Controls.Add(txtPrecio);
+            Controls.Add(label8);
+            Controls.Add(cmbVendedor);
+            Controls.Add(label7);
             Controls.Add(btnSalir);
             Controls.Add(btnGuardar);
             Controls.Add(pbFoto);
@@ -227,6 +262,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "GuardarVehiculo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GuardarVehiculo2";
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
@@ -249,6 +285,9 @@
         private Label label2;
         private Label label1;
         private Button btnSalir;
-        private MaskedTextBox txtPrecio;
+        private Label label7;
+        private ComboBox cmbVendedor;
+        private Label label8;
+        private TextBox txtPrecio;
     }
 }

@@ -23,12 +23,12 @@ namespace proyectoFalcon.Vistas
             loadData();
         }
 
-        private void loadData()
+        public void loadData()
         {
             gridVehiculos.Controls.Clear();
             Vehiculo.buscarVehiculos(null).ForEach(v =>
             {
-                gridVehiculos.Controls.Add(new VehiculoCard(v));
+                gridVehiculos.Controls.Add(new VehiculoCard(v, this));
             });
         }
 
@@ -44,7 +44,7 @@ namespace proyectoFalcon.Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using(GuardarVehiculo guardarVehiculo = new GuardarVehiculo())
+            using(GuardarVehiculo guardarVehiculo = new GuardarVehiculo(null))
             {
                 DialogResult result = guardarVehiculo.ShowDialog();
                 if(result == DialogResult.OK)

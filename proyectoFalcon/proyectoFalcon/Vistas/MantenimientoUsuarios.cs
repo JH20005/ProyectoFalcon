@@ -44,7 +44,7 @@ namespace proyectoFalcon.Vistas
         private void loadData()
         {
             lstUsuarios.Rows.Clear();
-            Persona.buscarPersonas().ForEach(persona =>
+            Persona.buscarPersonas(null).ForEach(persona =>
             {
                 DataGridViewRow row = lstUsuarios.Rows[lstUsuarios.Rows.Add()];
                 row.Cells["ID"].Value = persona.idpersona;

@@ -34,6 +34,7 @@
             lblMarca = new Label();
             lblModelo = new Label();
             btnDetalles = new Button();
+            lblPrecio = new Label();
             ((System.ComponentModel.ISupportInitialize)fotoVehiculo).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             fotoVehiculo.Location = new Point(16, 14);
             fotoVehiculo.Name = "fotoVehiculo";
             fotoVehiculo.Size = new Size(163, 87);
-            fotoVehiculo.SizeMode = PictureBoxSizeMode.StretchImage;
+            fotoVehiculo.SizeMode = PictureBoxSizeMode.Zoom;
             fotoVehiculo.TabIndex = 0;
             fotoVehiculo.TabStop = false;
             // 
@@ -77,7 +78,7 @@
             // 
             lblModelo.Location = new Point(21, 165);
             lblModelo.Name = "lblModelo";
-            lblModelo.Size = new Size(158, 28);
+            lblModelo.Size = new Size(158, 18);
             lblModelo.TabIndex = 4;
             lblModelo.Click += label4_Click;
             // 
@@ -98,10 +99,19 @@
             btnDetalles.MouseEnter += btnDetalles_MouseEnter;
             btnDetalles.MouseLeave += btnDetalles_MouseLeave;
             // 
+            // lblPrecio
+            // 
+            lblPrecio.Location = new Point(20, 186);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(158, 18);
+            lblPrecio.TabIndex = 6;
+            lblPrecio.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // VehiculoCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lblPrecio);
             Controls.Add(btnDetalles);
             Controls.Add(lblModelo);
             Controls.Add(lblMarca);
@@ -123,5 +133,6 @@
         private Label lblMarca;
         private Label lblModelo;
         private Button btnDetalles;
+        private Label lblPrecio;
     }
 }

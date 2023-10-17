@@ -8,18 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using proyectoFalcon.Modelos;
+using proyectoFalcon.Properties;
 using proyectoFalcon.Utils;
 
 namespace proyectoFalcon.Vistas
 {
     public partial class VehiculoCard : UserControl
     {
-        public VehiculoCard(Vehiculo vehiculo)
+        Vehiculo vehiculo;
+        MantenimientoVehiculos? mv;
+        public VehiculoCard(Vehiculo vehiculo, MantenimientoVehiculos? mv)
         {
             InitializeComponent();
+            if(mv != null )
+            {
+                this.mv = mv;
+            }         
+            this.vehiculo = vehiculo;
             lblMarca.Text = vehiculo.marca;
             lblModelo.Text = vehiculo.modelo;
-            fotoVehiculo.Image = Imagen.bytesToImage(vehiculo.foto);
+            lblPrecio.Text = string.Format("{0:c}", vehiculo.precio);
+            if(vehiculo.foto != null)
+            {
+                fotoVehiculo.Image = Imagen.bytesToImage(vehiculo.foto);
+            }
+            else
+            {
+                fotoVehiculo.Image = Resources.no_image;
+            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -29,6 +46,17 @@ namespace proyectoFalcon.Vistas
 
         private void btnDetalles_Click(object sender, EventArgs e)
         {
+            if(this.mv != null)
+            {
+                using (GuardarVehiculo guardarVehiculo = new GuardarVehiculo(this.vehiculo))
+                {
+                    DialogResult result = guardarVehiculo.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        this.mv.loadData();
+                    }
+                }
+            }
 
         }
 

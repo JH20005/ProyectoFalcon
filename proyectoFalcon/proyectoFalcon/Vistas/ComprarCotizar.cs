@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proyectoFalcon.Modelos;
 
 namespace proyectoFalcon.Vistas
 {
@@ -15,6 +16,16 @@ namespace proyectoFalcon.Vistas
         public ComprarCotizar()
         {
             InitializeComponent();
+            loadData();
+        }
+
+        public void loadData()
+        {
+            gridVehiculos.Controls.Clear();
+            Vehiculo.buscarVehiculos(10).ForEach(v =>
+            {
+                gridVehiculos.Controls.Add(new VehiculoCard(v, null));
+            });
         }
     }
 }

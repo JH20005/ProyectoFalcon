@@ -80,6 +80,7 @@ namespace proyectoFalcon.Vistas
                 reader.Close();
                 if(Sesion.getUsuarioLogueado().tipo != 10)
                 {
+                    conexion = ConexionBD.openConexion();
                     query = new StringBuilder();
                     query.Append("SELECT p.nombre, p.apellido, p.username ");
                     query.Append("FROM persona p ");

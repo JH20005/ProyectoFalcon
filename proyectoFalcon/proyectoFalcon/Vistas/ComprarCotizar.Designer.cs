@@ -28,32 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            gridVehiculos = new TableLayoutPanel();
             SuspendLayout();
             // 
-            // label1
+            // gridVehiculos
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(344, 287);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Compras y cotizar";
+            gridVehiculos.ColumnCount = 4;
+            gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            gridVehiculos.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
+            gridVehiculos.Location = new Point(13, 15);
+            gridVehiculos.Name = "gridVehiculos";
+            gridVehiculos.RowCount = 2;
+            gridVehiculos.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            gridVehiculos.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            gridVehiculos.Size = new Size(758, 540);
+            gridVehiculos.TabIndex = 1;
             // 
             // ComprarCotizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(label1);
+            Controls.Add(gridVehiculos);
             Name = "ComprarCotizar";
             Size = new Size(794, 603);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private TableLayoutPanel gridVehiculos;
     }
 }

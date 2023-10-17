@@ -16,9 +16,13 @@ namespace proyectoFalcon.Vistas
     public partial class GuardarVehiculo : Form
     {
         List<EstadosVehiculo> estados = new List<EstadosVehiculo>();
-        public GuardarVehiculo()
+        List<Persona> vendedores = new List<Persona>();
+        Vehiculo? vehiculo = null;
+
+        public GuardarVehiculo(Vehiculo? vehiculo)
         {
             InitializeComponent();
+            this.vehiculo = vehiculo;
             initPantalla();
         }
 
@@ -28,6 +32,25 @@ namespace proyectoFalcon.Vistas
             cmbEstadosVehiculo.DataSource = estados;
             cmbEstadosVehiculo.ValueMember = "idestadovehiculo";
             cmbEstadosVehiculo.DisplayMember = "descripcion";
+            vendedores = Persona.buscarPersonas(30);
+            vendedores.ForEach(v => v.nombre += " " + v.apellido);
+            cmbVendedor.DataSource = vendedores;
+            cmbVendedor.ValueMember = "idpersona";
+            cmbVendedor.DisplayMember = "nombre";
+            if (vehiculo != null)
+            {
+                cmbEstadosVehiculo.SelectedValue = vehiculo.idestado.idestadovehiculo;
+                cmbVendedor.SelectedValue = vehiculo.idvendedor.idpersona;
+                txtMarca.Text = vehiculo.marca;
+                txtModelo.Text = vehiculo.modelo;
+                txtPrecio.Text = string.Format("{0:c}", vehiculo.precio.ToString());
+                txtYear.Text = vehiculo.year.ToString();
+                if (this.vehiculo.foto != null)
+                {
+                    pbFoto.Image = Imagen.bytesToImage(this.vehiculo.foto);
+                }
+                btnAdjuntar.Visible = false;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -66,16 +89,30 @@ namespace proyectoFalcon.Vistas
             string year = txtYear.Text;
             decimal precio = Decimal.Parse(txtPrecio.Text, NumberStyles.Number | NumberStyles.AllowCurrencySymbol, new CultureInfo("en-US"));
             int idestado = int.Parse(cmbEstadosVehiculo.SelectedValue.ToString());
-            byte[] foto = Imagen.imageToByte(pbFoto.Image);
+            int idvendedor = int.Parse(cmbVendedor.SelectedValue.ToString());
             Vehiculo vehiculo = new Vehiculo();
             vehiculo.marca = marca;
             vehiculo.modelo = modelo;
             vehiculo.year = year;
             vehiculo.precio = precio;
-            vehiculo.idestado = idestado;
             vehiculo.fechapublicacion = DateTime.Today;
-            vehiculo.foto = foto;
-            vehiculo.guardarVehiculo();
+            vehiculo.idestado.idestadovehiculo = idestado;
+            vehiculo.idvendedor.idpersona = idvendedor;
+            if (this.vehiculo == null)
+            {
+                if (pbFoto.Image != null)
+                {
+                    byte[] foto = Imagen.imageToByte(pbFoto.Image);
+                    vehiculo.foto = foto;
+                }
+                vehiculo.guardarVehiculo();
+            }
+            else
+            {
+                vehiculo.idVehiculo = this.vehiculo.idVehiculo;
+                vehiculo.actualizarVehiculo();
+            }
+
         }
     }
 }

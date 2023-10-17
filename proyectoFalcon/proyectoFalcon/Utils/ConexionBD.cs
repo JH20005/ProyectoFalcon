@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
 
 namespace proyectoFalcon.Utils
 {
@@ -41,5 +42,13 @@ namespace proyectoFalcon.Utils
                 conexion.Close();
             }
         }
+
+
+        public static bool nonNull(MySqlDataReader reader, string columnName)
+        {
+            int col = reader.GetOrdinal(columnName);
+            return !reader.IsDBNull(col);
+        }
+
     }
 }

@@ -15,11 +15,11 @@ namespace proyectoFalcon.Modelos
         public int idpersona {  get; set; }
         public string nombre { get; set; }
         public string apellido {  get; set; }
-        public string correo { get; set; }
-        public string telefono {  get; set; }
+        public string? correo { get; set; }
+        public string? telefono {  get; set; }
         public Usuario usuario {  get; set; }
 
-        public static List<Persona> buscarPersonas()
+        public static List<Persona> buscarPersonas(int? idrol)
         {
             List<Persona> personas = new List<Persona>();
             try
@@ -31,8 +31,16 @@ namespace proyectoFalcon.Modelos
                 query.Append("INNER JOIN usuarios u ");
                 query.Append("ON p.username = u.username ");
                 query.Append("INNER JOIN roles r ");
-                query.Append("ON u.idrol = r.idrol");
+                query.Append("ON u.idrol = r.idrol ");
+                if (idrol.HasValue)
+                {
+                    query.Append("WHERE u.idrol = @idrol");
+                }
                 MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
+                if (idrol.HasValue)
+                {
+                    cmd.Parameters.AddWithValue("@idrol", idrol.Value);
+                }
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -40,7 +48,7 @@ namespace proyectoFalcon.Modelos
                     persona.idpersona = int.Parse(reader["idpersona"].ToString());
                     persona.nombre = reader["nombre"].ToString();
                     persona.apellido = reader["apellido"].ToString();
-                    persona.correo = reader["correo"].ToString();
+                    persona.correo = reader["correo"].ToString(); 
                     persona.telefono = reader["telefono"].ToString();
                     Usuario usuario = new Usuario();
                     usuario.username = reader["username"].ToString();
