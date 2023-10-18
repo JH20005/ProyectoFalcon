@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\OneDrive\\Escritorio\\Ues\\ciclo 8\\TOO\\PROYECTO\\proyectoTOO\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj": {}
+    "D:\\Proyectos\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\OneDrive\\Escritorio\\Ues\\ciclo 8\\TOO\\PROYECTO\\proyectoTOO\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj": {
+    "D:\\Proyectos\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Escritorio\\Ues\\ciclo 8\\TOO\\PROYECTO\\proyectoTOO\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj",
+        "projectUniqueName": "D:\\Proyectos\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj",
         "projectName": "proyectoFalcon",
-        "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Ues\\ciclo 8\\TOO\\PROYECTO\\proyectoTOO\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Ues\\ciclo 8\\TOO\\PROYECTO\\proyectoTOO\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\obj\\",
+        "projectPath": "D:\\Proyectos\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\proyectoFalcon.csproj",
+        "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\ProyectoFalcon\\proyectoFalcon\\proyectoFalcon\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Leo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

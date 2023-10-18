@@ -14,7 +14,7 @@ namespace proyectoFalcon.Utils
         private static string server = "127.0.0.1";
         private static string database = "falcon";
         private static string databaseUser = "root";
-        private static string databasePassword = "";//falcon
+        private static string databasePassword = "admin";//falcon
         private static MySqlConnection conexion = new MySqlConnection();
 
         public static void conectarBD()
