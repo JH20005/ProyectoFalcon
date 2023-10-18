@@ -22,7 +22,7 @@ namespace proyectoFalcon.Utils
         {
             using (var stream = new MemoryStream(bytes))
             {
-                return Image.FromStream(stream);
+                return Image.FromStream(stream,false,true);
             }
         }
     }
