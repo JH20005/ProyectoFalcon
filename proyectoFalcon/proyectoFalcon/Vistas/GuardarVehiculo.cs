@@ -89,7 +89,8 @@ namespace proyectoFalcon.Vistas
 
             if (txtMarca.Text.Equals(""))
             {
-                MessageBox.Show("Debe agregar la marca.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Debe agregar la marca.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Mensaje.showWarning("Debe agregar la marca.");
 
                 return false;
             }
@@ -117,7 +118,7 @@ namespace proyectoFalcon.Vistas
 
                 return false;
             }
-                return true;
+            return true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -158,7 +159,6 @@ namespace proyectoFalcon.Vistas
                 vehiculo.idVehiculo = this.vehiculo.idVehiculo;
                 vehiculo.actualizarVehiculo();
             }
-
         }
     }
 }

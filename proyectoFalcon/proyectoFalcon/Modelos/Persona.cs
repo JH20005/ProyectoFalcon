@@ -72,7 +72,7 @@ namespace proyectoFalcon.Modelos
             return personas;
         }
 
-        public static Persona buscarPersona(int idpersona)
+        public static Persona buscarPersona(int? idpersona, string? username)
         {
             Persona persona = new Persona();
             try
@@ -85,9 +85,24 @@ namespace proyectoFalcon.Modelos
                 query.Append("ON p.username = u.username ");
                 query.Append("INNER JOIN roles r ");
                 query.Append("ON u.idrol = r.idrol ");
-                query.Append("WHERE p.idpersona = @idpersona");               
+                query.Append("WHERE 1=1 ");
+                if(idpersona.HasValue)
+                {
+                    query.Append("AND p.idpersona = @idpersona ");
+                }
+                if(username != null)
+                {
+                    query.Append("AND p.username = @username");
+                }              
                 MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
-                cmd.Parameters.AddWithValue("@idpersona", idpersona);
+                if(idpersona.HasValue)
+                {
+                    cmd.Parameters.AddWithValue("@idpersona", idpersona);
+                }
+                if(username != null)
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                }
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

@@ -30,13 +30,19 @@
         {
             label7 = new Label();
             btnSalir = new Button();
-            btnGuardar = new Button();
+            btnComprar = new Button();
             pbFoto = new PictureBox();
             lblPrecio = new Label();
             lblModelo = new Label();
             lblMarca = new Label();
             lblVendedor = new Label();
+            panel1 = new Panel();
+            rdbAduana = new RadioButton();
+            rdbPais = new RadioButton();
+            rdbComprar = new RadioButton();
+            cmdPais = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label7
@@ -57,7 +63,7 @@
             btnSalir.FlatAppearance.BorderSize = 0;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(399, 162);
+            btnSalir.Location = new Point(373, 242);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(91, 34);
             btnSalir.TabIndex = 47;
@@ -65,30 +71,30 @@
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
-            // btnGuardar
+            // btnComprar
             // 
-            btnGuardar.BackColor = Color.FromArgb(255, 128, 128);
-            btnGuardar.Cursor = Cursors.Hand;
-            btnGuardar.DialogResult = DialogResult.OK;
-            btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
-            btnGuardar.FlatAppearance.BorderSize = 0;
-            btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(561, 163);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(91, 33);
-            btnGuardar.TabIndex = 46;
-            btnGuardar.Text = "Comprar";
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnGuardar_Click;
+            btnComprar.BackColor = Color.FromArgb(255, 128, 128);
+            btnComprar.Cursor = Cursors.Hand;
+            btnComprar.DialogResult = DialogResult.OK;
+            btnComprar.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnComprar.FlatAppearance.BorderSize = 0;
+            btnComprar.FlatStyle = FlatStyle.Flat;
+            btnComprar.ForeColor = Color.White;
+            btnComprar.Location = new Point(571, 242);
+            btnComprar.Name = "btnComprar";
+            btnComprar.Size = new Size(91, 33);
+            btnComprar.TabIndex = 46;
+            btnComprar.Text = "Continuar";
+            btnComprar.UseVisualStyleBackColor = false;
+            btnComprar.Click += btnGuardar_Click;
             // 
             // pbFoto
             // 
             pbFoto.BackColor = Color.Silver;
             pbFoto.Location = new Point(-1, 0);
             pbFoto.Name = "pbFoto";
-            pbFoto.Size = new Size(355, 214);
-            pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFoto.Size = new Size(355, 289);
+            pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbFoto.TabIndex = 45;
             pbFoto.TabStop = false;
             // 
@@ -133,16 +139,73 @@
             lblVendedor.TabIndex = 49;
             lblVendedor.Text = "label1";
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(rdbAduana);
+            panel1.Controls.Add(rdbPais);
+            panel1.Controls.Add(rdbComprar);
+            panel1.Location = new Point(373, 190);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(287, 46);
+            panel1.TabIndex = 50;
+            // 
+            // rdbAduana
+            // 
+            rdbAduana.AutoSize = true;
+            rdbAduana.Location = new Point(181, 14);
+            rdbAduana.Name = "rdbAduana";
+            rdbAduana.Size = new Size(108, 19);
+            rdbAduana.TabIndex = 2;
+            rdbAduana.TabStop = true;
+            rdbAduana.Text = "Enviar a aduana";
+            rdbAduana.UseVisualStyleBackColor = true;
+            rdbAduana.CheckedChanged += rdbAduana_CheckedChanged;
+            // 
+            // rdbPais
+            // 
+            rdbPais.AutoSize = true;
+            rdbPais.Location = new Point(85, 14);
+            rdbPais.Name = "rdbPais";
+            rdbPais.Size = new Size(90, 19);
+            rdbPais.TabIndex = 1;
+            rdbPais.TabStop = true;
+            rdbPais.Text = "Enviar a país";
+            rdbPais.UseVisualStyleBackColor = true;
+            rdbPais.CheckedChanged += rdbPais_CheckedChanged;
+            // 
+            // rdbComprar
+            // 
+            rdbComprar.AutoSize = true;
+            rdbComprar.Location = new Point(0, 14);
+            rdbComprar.Name = "rdbComprar";
+            rdbComprar.Size = new Size(72, 19);
+            rdbComprar.TabIndex = 0;
+            rdbComprar.TabStop = true;
+            rdbComprar.Text = "Comprar";
+            rdbComprar.UseVisualStyleBackColor = true;
+            rdbComprar.CheckedChanged += rdbComprar_CheckedChanged;
+            // 
+            // cmdPais
+            // 
+            cmdPais.FormattingEnabled = true;
+            cmdPais.Location = new Point(373, 155);
+            cmdPais.Name = "cmdPais";
+            cmdPais.Size = new Size(289, 23);
+            cmdPais.TabIndex = 51;
+            cmdPais.Visible = false;
+            // 
             // DetalleVehiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            ClientSize = new Size(677, 214);
+            ClientSize = new Size(674, 288);
+            Controls.Add(cmdPais);
+            Controls.Add(panel1);
             Controls.Add(lblVendedor);
             Controls.Add(label7);
             Controls.Add(btnSalir);
-            Controls.Add(btnGuardar);
+            Controls.Add(btnComprar);
             Controls.Add(pbFoto);
             Controls.Add(lblPrecio);
             Controls.Add(lblModelo);
@@ -152,6 +215,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DetalleVehiculo";
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,12 +226,17 @@
         private Label label8;
         private Label label7;
         private Button btnSalir;
-        private Button btnGuardar;
+        private Button btnComprar;
         private PictureBox pbFoto;
         private Label lblPrecio;
         private Label label3;
         private Label lblModelo;
         private Label lblMarca;
         private Label lblVendedor;
+        private Panel panel1;
+        private RadioButton rdbAduana;
+        private RadioButton rdbPais;
+        private RadioButton rdbComprar;
+        private ComboBox cmdPais;
     }
 }

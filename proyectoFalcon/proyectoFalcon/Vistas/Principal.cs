@@ -66,9 +66,9 @@ namespace proyectoFalcon.Vistas
                         {
                             appPanel.Controls.Clear();
                             reiniciarSidebar();
-                            btnCompras.Image = Resources.menu_compras_selected;
-                            btnCompras.BackColor = Estilos.getSecundario();
-                            btnCompras.ForeColor = Estilos.getPrimario();
+                            btnCotizar.Image = Resources.menu_compras_selected;
+                            btnCotizar.BackColor = Estilos.getSecundario();
+                            btnCotizar.ForeColor = Estilos.getPrimario();
                             showPantalla(new ComprarCotizar());
                             break;
                         }
@@ -78,7 +78,7 @@ namespace proyectoFalcon.Vistas
                         }
                 }
                 reader.Close();
-                if(Sesion.getUsuarioLogueado().tipo != 10)
+                if (Sesion.getUsuarioLogueado().tipo != 10)
                 {
                     conexion = ConexionBD.openConexion();
                     query = new StringBuilder();
@@ -145,7 +145,11 @@ namespace proyectoFalcon.Vistas
             btnEnvios.BackColor = Estilos.getPrimario();
             btnEnvios.ForeColor = Estilos.getSecundario();
 
-            btnCompras.Image = Resources.menu_compras;
+            btnCotizar.Image = Resources.menu_compras;
+            btnCotizar.BackColor = Estilos.getPrimario();
+            btnCotizar.ForeColor = Estilos.getSecundario();
+
+            btnCompras.Image = Resources.menu_mis_compras;
             btnCompras.BackColor = Estilos.getPrimario();
             btnCompras.ForeColor = Estilos.getSecundario();
         }
@@ -153,7 +157,7 @@ namespace proyectoFalcon.Vistas
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             button1.BackColor = Estilos.getSecundario();
-            button1.ForeColor = Estilos.getPrimario() ;
+            button1.ForeColor = Estilos.getPrimario();
         }
 
         private void button1_MouseMove(object sender, MouseEventArgs e)
@@ -163,7 +167,7 @@ namespace proyectoFalcon.Vistas
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.ForeColor = Estilos.getSecundario() ;
+            button1.ForeColor = Estilos.getSecundario();
             button1.BackColor = Estilos.getPrimario();
         }
 
@@ -256,9 +260,9 @@ namespace proyectoFalcon.Vistas
         {
             appPanel.Controls.Clear();
             reiniciarSidebar();
-            btnCompras.Image = Resources.menu_compras_selected;
-            btnCompras.BackColor = Estilos.getSecundario();
-            btnCompras.ForeColor = Estilos.getPrimario();
+            btnCotizar.Image = Resources.menu_compras_selected;
+            btnCotizar.BackColor = Estilos.getSecundario();
+            btnCotizar.ForeColor = Estilos.getPrimario();
             showPantalla(new ComprarCotizar());
         }
 
@@ -270,6 +274,16 @@ namespace proyectoFalcon.Vistas
             btnEnvios.BackColor = Estilos.getSecundario();
             btnEnvios.ForeColor = Estilos.getPrimario();
             showPantalla(new EnvioSeguimiento());
+        }
+
+        private void btnCompras_Click_1(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnCompras.Image = Resources.menu_mis_compras_selected;
+            btnCompras.BackColor = Estilos.getSecundario();
+            btnCompras.ForeColor = Estilos.getPrimario();
+            showPantalla(new MisCompras());
         }
     }
 }

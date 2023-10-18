@@ -41,10 +41,11 @@
             pnlVehiculos = new Panel();
             btnVehiculos = new Button();
             pnlCompras = new Panel();
-            btnCompras = new Button();
+            btnCotizar = new Button();
             pnlEnvios = new Panel();
-            btnEnvios = new Button();
+            btnCompras = new Button();
             panel7 = new Panel();
+            btnEnvios = new Button();
             panel8 = new Panel();
             pnlCerrar = new Panel();
             btnCerrarSesion = new Button();
@@ -58,6 +59,7 @@
             pnlVehiculos.SuspendLayout();
             pnlCompras.SuspendLayout();
             pnlEnvios.SuspendLayout();
+            panel7.SuspendLayout();
             pnlCerrar.SuspendLayout();
             SuspendLayout();
             // 
@@ -211,11 +213,38 @@
             // 
             // pnlCompras
             // 
-            pnlCompras.Controls.Add(btnCompras);
+            pnlCompras.Controls.Add(btnCotizar);
             pnlCompras.Location = new Point(3, 165);
             pnlCompras.Name = "pnlCompras";
             pnlCompras.Size = new Size(245, 48);
             pnlCompras.TabIndex = 1;
+            // 
+            // btnCotizar
+            // 
+            btnCotizar.Cursor = Cursors.Hand;
+            btnCotizar.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnCotizar.FlatStyle = FlatStyle.Flat;
+            btnCotizar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCotizar.ForeColor = Color.White;
+            btnCotizar.Image = Properties.Resources.menu_compras;
+            btnCotizar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCotizar.Location = new Point(-6, -3);
+            btnCotizar.Name = "btnCotizar";
+            btnCotizar.Size = new Size(267, 48);
+            btnCotizar.TabIndex = 3;
+            btnCotizar.Text = "Cotizar";
+            btnCotizar.TextAlign = ContentAlignment.MiddleLeft;
+            btnCotizar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCotizar.UseVisualStyleBackColor = true;
+            btnCotizar.Click += btnCompras_Click;
+            // 
+            // pnlEnvios
+            // 
+            pnlEnvios.Controls.Add(btnCompras);
+            pnlEnvios.Location = new Point(3, 219);
+            pnlEnvios.Name = "pnlEnvios";
+            pnlEnvios.Size = new Size(245, 48);
+            pnlEnvios.TabIndex = 1;
             // 
             // btnCompras
             // 
@@ -224,25 +253,25 @@
             btnCompras.FlatStyle = FlatStyle.Flat;
             btnCompras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCompras.ForeColor = Color.White;
-            btnCompras.Image = Properties.Resources.menu_compras;
+            btnCompras.Image = Properties.Resources.menu_mis_compras;
             btnCompras.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCompras.Location = new Point(-6, -3);
+            btnCompras.Location = new Point(-3, 0);
             btnCompras.Name = "btnCompras";
             btnCompras.Size = new Size(267, 48);
-            btnCompras.TabIndex = 3;
-            btnCompras.Text = "Compras y cotizaciones";
+            btnCompras.TabIndex = 5;
+            btnCompras.Text = "Mis compras";
             btnCompras.TextAlign = ContentAlignment.MiddleLeft;
             btnCompras.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCompras.UseVisualStyleBackColor = true;
-            btnCompras.Click += btnCompras_Click;
+            btnCompras.Click += btnCompras_Click_1;
             // 
-            // pnlEnvios
+            // panel7
             // 
-            pnlEnvios.Controls.Add(btnEnvios);
-            pnlEnvios.Location = new Point(3, 219);
-            pnlEnvios.Name = "pnlEnvios";
-            pnlEnvios.Size = new Size(245, 48);
-            pnlEnvios.TabIndex = 1;
+            panel7.Controls.Add(btnEnvios);
+            panel7.Location = new Point(3, 273);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(248, 48);
+            panel7.TabIndex = 1;
             // 
             // btnEnvios
             // 
@@ -253,22 +282,15 @@
             btnEnvios.ForeColor = Color.White;
             btnEnvios.Image = Properties.Resources.menu_envios;
             btnEnvios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEnvios.Location = new Point(-6, 0);
+            btnEnvios.Location = new Point(-3, 0);
             btnEnvios.Name = "btnEnvios";
             btnEnvios.Size = new Size(267, 48);
             btnEnvios.TabIndex = 4;
-            btnEnvios.Text = "Envíos y seguimiento";
+            btnEnvios.Text = "Mis envios";
             btnEnvios.TextAlign = ContentAlignment.MiddleLeft;
             btnEnvios.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEnvios.UseVisualStyleBackColor = true;
             btnEnvios.Click += btnEnvios_Click;
-            // 
-            // panel7
-            // 
-            panel7.Location = new Point(3, 273);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(248, 48);
-            panel7.TabIndex = 1;
             // 
             // panel8
             // 
@@ -351,6 +373,7 @@
             pnlVehiculos.ResumeLayout(false);
             pnlCompras.ResumeLayout(false);
             pnlEnvios.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             pnlCerrar.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -377,8 +400,9 @@
         private Button btnVehiculos;
         private Button button4;
         private Button btnEnvios;
-        private Button btnCompras;
+        private Button btnCotizar;
         private FlowLayoutPanel pnlMenu;
         private Panel appPanel;
+        private Button btnCompras;
     }
 }

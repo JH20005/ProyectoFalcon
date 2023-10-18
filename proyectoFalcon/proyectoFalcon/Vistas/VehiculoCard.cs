@@ -23,12 +23,12 @@ namespace proyectoFalcon.Vistas
             if(mv != null )
             {
                 this.mv = mv;
-            }         
+            }
             this.vehiculo = vehiculo;
             lblMarca.Text = vehiculo.marca;
             lblModelo.Text = vehiculo.modelo;
             lblPrecio.Text = string.Format("{0:c}", vehiculo.precio);
-            if(vehiculo.foto != null)
+            if (vehiculo.foto != null)
             {
                 fotoVehiculo.Image = Imagen.bytesToImage(vehiculo.foto);
             }
@@ -36,7 +36,7 @@ namespace proyectoFalcon.Vistas
             {
                 fotoVehiculo.Image = Resources.no_image;
             }
-            
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -64,8 +64,9 @@ namespace proyectoFalcon.Vistas
                     DialogResult result = detalleVehiculo.ShowDialog();
                     if (result == DialogResult.OK)
                     {
-                        //this.mv.loadData();
+
                     }
+
                 }
             }
 

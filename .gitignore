@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Clase conexion a BD
+/proyectoFalcon/proyectoFalcon/Utils/ConexionBD.cs
+
 # User-specific files
 *.rsuser
 *.suo

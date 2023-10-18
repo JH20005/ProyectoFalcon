@@ -44,10 +44,10 @@ namespace proyectoFalcon.Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using(GuardarVehiculo guardarVehiculo = new GuardarVehiculo(null))
+            using (GuardarVehiculo guardarVehiculo = new GuardarVehiculo(null))
             {
                 DialogResult result = guardarVehiculo.ShowDialog();
-                if(result == DialogResult.OK)
+                if (result == DialogResult.OK)
                 {
                     loadData();
                 }

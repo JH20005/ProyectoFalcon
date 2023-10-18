@@ -64,6 +64,7 @@
             btnBack.Size = new Size(43, 41);
             btnBack.TabIndex = 9;
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Visible = false;
             // 
             // btnForward
             // 
@@ -78,6 +79,7 @@
             btnForward.Size = new Size(43, 41);
             btnForward.TabIndex = 8;
             btnForward.UseVisualStyleBackColor = false;
+            btnForward.Visible = false;
             // 
             // btnGuardar
             // 

@@ -69,8 +69,7 @@ namespace proyectoFalcon.Modelos
             }
             catch (Exception ex)
             {
-                //Mensaje.showError(ex.Message);
-                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                Mensaje.showError(ex.Message);
             }
             finally
             {

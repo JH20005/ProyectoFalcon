@@ -103,6 +103,26 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_comprado {
+            get {
+                object obj = ResourceManager.GetObject("icono_comprado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_comprar {
+            get {
+                object obj = ResourceManager.GetObject("icono_comprar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_eliminar {
             get {
                 object obj = ResourceManager.GetObject("icono_eliminar", resourceCulture);
@@ -216,6 +236,26 @@ namespace proyectoFalcon.Properties {
         internal static System.Drawing.Bitmap menu_inicio_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_inicio_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_mis_compras {
+            get {
+                object obj = ResourceManager.GetObject("menu_mis_compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_mis_compras_selected {
+            get {
+                object obj = ResourceManager.GetObject("menu_mis_compras_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

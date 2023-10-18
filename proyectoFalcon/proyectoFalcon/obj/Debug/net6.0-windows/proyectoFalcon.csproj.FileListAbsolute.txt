@@ -82,3 +82,6 @@ C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\Proyecto
 C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.CopyComplete
 C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.genruntimeconfig.cache
 C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\ref\proyectoFalcon.dll
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.CompraCard.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MisCompras.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.ConfirmarPago.resources

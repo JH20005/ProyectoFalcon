@@ -122,8 +122,8 @@ namespace proyectoFalcon.Vistas
 
             if (txtNombre.Text.Equals(""))
             {
-                MessageBox.Show("Debe agregar la Nombre.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                //MessageBox.Show("Debe agregar la Nombre.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Mensaje.showWarning("waning");
                 return false;
             }
             if (txtApellido.Text.Equals(""))
