@@ -72,6 +72,51 @@ namespace proyectoFalcon.Modelos
             return personas;
         }
 
+        public static Persona buscarPersona(int idpersona)
+        {
+            Persona persona = new Persona();
+            try
+            {
+                MySqlConnection conexion = ConexionBD.openConexion();
+                StringBuilder query = new StringBuilder();
+                query.Append("SELECT p.idpersona, p.nombre, p.apellido, p.correo, p.telefono, p.username, r.descripcion ");
+                query.Append("FROM persona p ");
+                query.Append("INNER JOIN usuarios u ");
+                query.Append("ON p.username = u.username ");
+                query.Append("INNER JOIN roles r ");
+                query.Append("ON u.idrol = r.idrol ");
+                query.Append("WHERE p.idpersona = @idpersona");               
+                MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
+                cmd.Parameters.AddWithValue("@idpersona", idpersona);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    persona.idpersona = int.Parse(reader["idpersona"].ToString());
+                    persona.nombre = reader["nombre"].ToString();
+                    persona.apellido = reader["apellido"].ToString();
+                    persona.correo = reader["correo"].ToString();
+                    persona.telefono = reader["telefono"].ToString();
+                    Usuario usuario = new Usuario();
+                    usuario.username = reader["username"].ToString();
+                    Rol rol = new Rol();
+                    rol.descripcion = reader["descripcion"].ToString();
+                    usuario.rol = rol;
+                    persona.usuario = usuario;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Mensaje.showError(ex.Message);
+            }
+            finally
+            {
+                ConexionBD.closeConexion();
+
+            }
+            return persona;
+        }
+
         public void guardarPersona()
         {
             try

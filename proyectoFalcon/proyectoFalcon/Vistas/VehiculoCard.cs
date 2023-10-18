@@ -57,6 +57,17 @@ namespace proyectoFalcon.Vistas
                     }
                 }
             }
+            else
+            {
+                using (DetalleVehiculo detalleVehiculo = new DetalleVehiculo(this.vehiculo))
+                {
+                    DialogResult result = detalleVehiculo.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        //this.mv.loadData();
+                    }
+                }
+            }
 
         }
 
