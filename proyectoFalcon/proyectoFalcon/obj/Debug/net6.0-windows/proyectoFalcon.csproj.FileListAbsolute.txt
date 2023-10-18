@@ -49,3 +49,36 @@ D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windo
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.VehiculoCard.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.GuardarVehiculo.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.DetalleVehiculo.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Resources.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.AppDialog.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.AppMessage.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.ComprarCotizar.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.DetalleVehiculo.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.EnvioSeguimiento.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.GuardarVehiculo.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Home.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Login.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MantenimientoUsuarios.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MantenimientoVehiculos.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Usuario.NuevoUsuario.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.Principal.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.VehiculoCard.resources
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.GenerateResource.cache
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.dll
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\refint\proyectoFalcon.dll
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.pdb
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.exe
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.deps.json
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.runtimeconfig.json
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.dll
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.pdb
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\MySql.Data.xml
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.CopyComplete
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.genruntimeconfig.cache
+C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\ref\proyectoFalcon.dll

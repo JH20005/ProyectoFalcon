@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -115,9 +116,62 @@ namespace proyectoFalcon.Vistas
         {
             reiniciar();
         }
+        private Boolean validar()
+        {
+            string pattern = @"^\d{10}$";
+
+            if (txtNombre.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar la Nombre.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtApellido.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar la Apellido.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtTelefono.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar el Telefono.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtCorreo.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar el Correo.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtUsername.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar el Usuario.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar el Contraseña.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (!Regex.IsMatch(txtTelefono.Text, pattern))
+            {
+                MessageBox.Show("El precio debe ser numerico.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            return true;
+        }
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!validar())
+            {
+                return;
+            }
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string telefono = txtTelefono.Text;

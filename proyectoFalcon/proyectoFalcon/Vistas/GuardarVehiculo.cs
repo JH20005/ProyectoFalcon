@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using proyectoFalcon.Modelos;
@@ -82,8 +83,53 @@ namespace proyectoFalcon.Vistas
             btnAdjuntar.FlatAppearance.BorderColor = Estilos.getSecundario();
         }
 
+        private Boolean validar()
+        {
+            string pattern = @"^\d+(\.\d+)?$";
+
+            if (txtMarca.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar la marca.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtModelo.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar la Modelo.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtYear.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar el año.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (txtPrecio.Text.Equals(""))
+            {
+                MessageBox.Show("Debe agregar el Precio.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (!Regex.IsMatch(txtPrecio.Text, pattern))
+            {
+                MessageBox.Show("El precio debe ser numerico.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+                return true;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!validar())
+            {
+                return;
+            }
+            else
+            {
+
+            }
             string marca = txtMarca.Text;
             string modelo = txtModelo.Text;
             string year = txtYear.Text;
