@@ -46,11 +46,15 @@
             btnCompras = new Button();
             pnlEnvio = new Panel();
             btnEnvios = new Button();
-            panel8 = new Panel();
+            pnlMisVehiculos = new Panel();
             pnlCerrar = new Panel();
             btnCerrarSesion = new Button();
             button1 = new Button();
             appPanel = new Panel();
+            panel2 = new Panel();
+            pnlMisEnvios = new Panel();
+            btnMisEnvios = new Button();
+            btnMisVehiculos = new Button();
             sidebar.SuspendLayout();
             panel1.SuspendLayout();
             pnlMenu.SuspendLayout();
@@ -60,7 +64,9 @@
             pnlCompras.SuspendLayout();
             pnlEnvios.SuspendLayout();
             pnlEnvio.SuspendLayout();
+            pnlMisVehiculos.SuspendLayout();
             pnlCerrar.SuspendLayout();
+            pnlMisEnvios.SuspendLayout();
             SuspendLayout();
             // 
             // sidebar
@@ -124,10 +130,11 @@
             pnlMenu.Controls.Add(pnlCompras);
             pnlMenu.Controls.Add(pnlEnvios);
             pnlMenu.Controls.Add(pnlEnvio);
-            pnlMenu.Controls.Add(panel8);
+            pnlMenu.Controls.Add(pnlMisVehiculos);
+            pnlMenu.Controls.Add(pnlMisEnvios);
             pnlMenu.Location = new Point(3, 117);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new Size(245, 386);
+            pnlMenu.Size = new Size(245, 429);
             pnlMenu.TabIndex = 1;
             // 
             // pnlInicio
@@ -292,20 +299,22 @@
             btnEnvios.UseVisualStyleBackColor = true;
             btnEnvios.Click += btnEnvios_Click;
             // 
-            // panel8
+            // pnlMisVehiculos
             // 
-            panel8.Location = new Point(3, 327);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(251, 48);
-            panel8.TabIndex = 1;
+            pnlMisVehiculos.Controls.Add(btnMisVehiculos);
+            pnlMisVehiculos.Controls.Add(panel2);
+            pnlMisVehiculos.Location = new Point(3, 327);
+            pnlMisVehiculos.Name = "pnlMisVehiculos";
+            pnlMisVehiculos.Size = new Size(251, 48);
+            pnlMisVehiculos.TabIndex = 1;
             // 
             // pnlCerrar
             // 
             pnlCerrar.Controls.Add(btnCerrarSesion);
             pnlCerrar.Controls.Add(button1);
-            pnlCerrar.Location = new Point(3, 509);
+            pnlCerrar.Location = new Point(3, 552);
             pnlCerrar.Name = "pnlCerrar";
-            pnlCerrar.Size = new Size(245, 94);
+            pnlCerrar.Size = new Size(245, 42);
             pnlCerrar.TabIndex = 4;
             // 
             // btnCerrarSesion
@@ -315,7 +324,7 @@
             btnCerrarSesion.FlatStyle = FlatStyle.Flat;
             btnCerrarSesion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrarSesion.ForeColor = SystemColors.Control;
-            btnCerrarSesion.Location = new Point(84, 46);
+            btnCerrarSesion.Location = new Point(85, 5);
             btnCerrarSesion.Margin = new Padding(4, 5, 4, 5);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(145, 32);
@@ -333,7 +342,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(11, 46);
+            button1.Location = new Point(12, 5);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(62, 32);
@@ -351,6 +360,58 @@
             appPanel.Name = "appPanel";
             appPanel.Size = new Size(794, 603);
             appPanel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(3, 381);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(251, 48);
+            panel2.TabIndex = 2;
+            // 
+            // pnlMisEnvios
+            // 
+            pnlMisEnvios.Controls.Add(btnMisEnvios);
+            pnlMisEnvios.Location = new Point(3, 381);
+            pnlMisEnvios.Name = "pnlMisEnvios";
+            pnlMisEnvios.Size = new Size(251, 48);
+            pnlMisEnvios.TabIndex = 2;
+            // 
+            // btnMisEnvios
+            // 
+            btnMisEnvios.Cursor = Cursors.Hand;
+            btnMisEnvios.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnMisEnvios.FlatStyle = FlatStyle.Flat;
+            btnMisEnvios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMisEnvios.ForeColor = Color.White;
+            btnMisEnvios.Image = Properties.Resources.menu_envios;
+            btnMisEnvios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMisEnvios.Location = new Point(-2, 0);
+            btnMisEnvios.Name = "btnMisEnvios";
+            btnMisEnvios.Size = new Size(267, 48);
+            btnMisEnvios.TabIndex = 5;
+            btnMisEnvios.Text = "Mis envios";
+            btnMisEnvios.TextAlign = ContentAlignment.MiddleLeft;
+            btnMisEnvios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnMisEnvios.UseVisualStyleBackColor = true;
+            // 
+            // btnMisVehiculos
+            // 
+            btnMisVehiculos.Cursor = Cursors.Hand;
+            btnMisVehiculos.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
+            btnMisVehiculos.FlatStyle = FlatStyle.Flat;
+            btnMisVehiculos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMisVehiculos.ForeColor = Color.White;
+            btnMisVehiculos.Image = Properties.Resources.menu_vehiculos;
+            btnMisVehiculos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMisVehiculos.Location = new Point(-4, 0);
+            btnMisVehiculos.Name = "btnMisVehiculos";
+            btnMisVehiculos.Size = new Size(261, 48);
+            btnMisVehiculos.TabIndex = 3;
+            btnMisVehiculos.Text = "Mis vehiculos";
+            btnMisVehiculos.TextAlign = ContentAlignment.MiddleLeft;
+            btnMisVehiculos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnMisVehiculos.UseVisualStyleBackColor = true;
+            btnMisVehiculos.Click += btnMisVehiculos_Click;
             // 
             // Principal
             // 
@@ -374,7 +435,9 @@
             pnlCompras.ResumeLayout(false);
             pnlEnvios.ResumeLayout(false);
             pnlEnvio.ResumeLayout(false);
+            pnlMisVehiculos.ResumeLayout(false);
             pnlCerrar.ResumeLayout(false);
+            pnlMisEnvios.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -389,7 +452,7 @@
         private Button button1;
         private Button btnCerrarSesion;
         private Button btnInicio;
-        private Panel panel8;
+        private Panel pnlMisVehiculos;
         private Panel pnlEnvio;
         private Panel pnlEnvios;
         private Panel pnlCompras;
@@ -404,5 +467,9 @@
         private FlowLayoutPanel pnlMenu;
         private Panel appPanel;
         private Button btnCompras;
+        private Panel panel2;
+        private Panel pnlMisEnvios;
+        private Button btnMisVehiculos;
+        private Button btnMisEnvios;
     }
 }

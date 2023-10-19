@@ -37,7 +37,7 @@
             lblMarca = new Label();
             lblVendedor = new Label();
             panel1 = new Panel();
-            rdbAduana = new RadioButton();
+            rdbNaviera = new RadioButton();
             rdbPais = new RadioButton();
             rdbComprar = new RadioButton();
             cmbDestino = new ComboBox();
@@ -141,7 +141,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(rdbAduana);
+            panel1.Controls.Add(rdbNaviera);
             panel1.Controls.Add(rdbPais);
             panel1.Controls.Add(rdbComprar);
             panel1.Location = new Point(373, 190);
@@ -149,17 +149,17 @@
             panel1.Size = new Size(287, 46);
             panel1.TabIndex = 50;
             // 
-            // rdbAduana
+            // rdbNaviera
             // 
-            rdbAduana.AutoSize = true;
-            rdbAduana.Location = new Point(181, 14);
-            rdbAduana.Name = "rdbAduana";
-            rdbAduana.Size = new Size(108, 19);
-            rdbAduana.TabIndex = 2;
-            rdbAduana.TabStop = true;
-            rdbAduana.Text = "Enviar a aduana";
-            rdbAduana.UseVisualStyleBackColor = true;
-            rdbAduana.CheckedChanged += rdbAduana_CheckedChanged;
+            rdbNaviera.AutoSize = true;
+            rdbNaviera.Location = new Point(181, 14);
+            rdbNaviera.Name = "rdbNaviera";
+            rdbNaviera.Size = new Size(107, 19);
+            rdbNaviera.TabIndex = 2;
+            rdbNaviera.TabStop = true;
+            rdbNaviera.Text = "Enviar a naviera";
+            rdbNaviera.UseVisualStyleBackColor = true;
+            rdbNaviera.CheckedChanged += rdbAduana_CheckedChanged;
             // 
             // rdbPais
             // 
@@ -234,7 +234,7 @@
         private Label lblMarca;
         private Label lblVendedor;
         private Panel panel1;
-        private RadioButton rdbAduana;
+        private RadioButton rdbNaviera;
         private RadioButton rdbPais;
         private RadioButton rdbComprar;
         private ComboBox cmbDestino;

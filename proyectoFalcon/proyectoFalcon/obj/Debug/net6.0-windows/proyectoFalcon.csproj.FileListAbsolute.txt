@@ -85,3 +85,5 @@ C:\Users\franc\OneDrive\Escritorio\Ues\ciclo 8\TOO\PROYECTO\proyectoTOO\Proyecto
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.CompraCard.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MisCompras.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.ConfirmarPago.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.EnvioCard.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.StatusSteps.resources

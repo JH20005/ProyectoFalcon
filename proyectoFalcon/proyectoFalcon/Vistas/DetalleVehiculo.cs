@@ -18,7 +18,6 @@ namespace proyectoFalcon.Vistas
         Vehiculo vehiculo;
         ACCION? accion;
         List<Pais> paises;
-        List<Aduana> aduanas;
 
         public DetalleVehiculo(Vehiculo vehiculo)
         {
@@ -30,7 +29,6 @@ namespace proyectoFalcon.Vistas
         public void initPantalla()
         {
             paises = Pais.getPaises();
-            aduanas = Aduana.getAduanas();
             vehiculo.idvendedor = getVendedor();
             lblMarca.Text = vehiculo.marca;
             lblModelo.Text = vehiculo.modelo;
@@ -79,7 +77,7 @@ namespace proyectoFalcon.Vistas
             estado.idestadoenvio = 10;
             envio.estado = estado;
             Destino destino = new Destino();
-            destino.iddestino = int.Parse(cmbDestino.SelectedValue.ToString());
+            destino.iddestino = tipoenvio == 1 ? 7 : int.Parse(cmbDestino.SelectedValue.ToString());
             envio.destino = destino;
             return envio;
         }
@@ -111,7 +109,7 @@ namespace proyectoFalcon.Vistas
                             Mensaje.showInfo("Enviado con éxito, revisar lista de envios.");
                             break;
                         }
-                    case ACCION.ENVIAR_ADUANA:
+                    case ACCION.ENVIAR_NAVIERA:
                         {
                             getEnvio(1).guardarEnvio();
                             vehiculo.idestado.idestadovehiculo = 20;
@@ -140,11 +138,8 @@ namespace proyectoFalcon.Vistas
 
         private void rdbAduana_CheckedChanged(object sender, EventArgs e)
         {
-            cmbDestino.DataSource = aduanas;
-            cmbDestino.ValueMember = "iddestino";
-            cmbDestino.DisplayMember = "descripcion";
-            cmbDestino.Visible = true;
-            accion = ACCION.ENVIAR_ADUANA;
+            cmbDestino.Visible = false;
+            accion = ACCION.ENVIAR_NAVIERA;
         }
     }
 
@@ -152,6 +147,6 @@ namespace proyectoFalcon.Vistas
     {
         COMPRAR = 0,
         ENVIAR_PAIS = 1,
-        ENVIAR_ADUANA = 2,
+        ENVIAR_NAVIERA = 2,
     }
 }

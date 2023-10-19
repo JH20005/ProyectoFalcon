@@ -36,18 +36,19 @@
             // 
             // gridVehiculos
             // 
+            gridVehiculos.AutoScroll = true;
+            gridVehiculos.AutoSize = true;
             gridVehiculos.ColumnCount = 4;
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            gridVehiculos.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
-            gridVehiculos.Location = new Point(19, 12);
+            gridVehiculos.Location = new Point(5, 12);
             gridVehiculos.Name = "gridVehiculos";
             gridVehiculos.RowCount = 2;
             gridVehiculos.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             gridVehiculos.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            gridVehiculos.Size = new Size(758, 540);
+            gridVehiculos.Size = new Size(781, 540);
             gridVehiculos.TabIndex = 0;
             // 
             // btnBack
@@ -102,6 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.White;
             Controls.Add(btnGuardar);
             Controls.Add(btnBack);
@@ -110,6 +112,7 @@
             Name = "MantenimientoVehiculos";
             Size = new Size(794, 603);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

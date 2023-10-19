@@ -33,18 +33,19 @@
             // 
             // gridVehiculos
             // 
+            gridVehiculos.AutoScroll = true;
+            gridVehiculos.AutoSize = true;
             gridVehiculos.ColumnCount = 4;
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             gridVehiculos.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            gridVehiculos.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
-            gridVehiculos.Location = new Point(13, 15);
+            gridVehiculos.Location = new Point(3, 15);
             gridVehiculos.Name = "gridVehiculos";
             gridVehiculos.RowCount = 2;
             gridVehiculos.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             gridVehiculos.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            gridVehiculos.Size = new Size(758, 540);
+            gridVehiculos.Size = new Size(788, 540);
             gridVehiculos.TabIndex = 1;
             // 
             // ComprarCotizar
@@ -56,6 +57,7 @@
             Name = "ComprarCotizar";
             Size = new Size(794, 603);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

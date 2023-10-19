@@ -19,6 +19,15 @@ namespace proyectoFalcon.Modelos
         public EstadosEnvio estado {  get; set; }
         public Destino destino { get; set; }
 
+        public Envio()
+        {
+            vehiculo = new Vehiculo();
+            vendedor = new Persona();
+            comprador = new Persona();
+            estado = new EstadosEnvio();
+            destino = new Destino();
+        }
+
         public void guardarEnvio()
         {
             try
@@ -45,6 +54,68 @@ namespace proyectoFalcon.Modelos
             {
                 ConexionBD.closeConexion();
             }
+        }
+
+        public static List<Envio> buscarEnvios(int? idcomprador)
+        {
+            List<Envio> envios = new List<Envio>();
+            try
+            {
+                MySqlConnection conexion = ConexionBD.openConexion();
+                StringBuilder query = new StringBuilder();
+                query.Append("SELECT e.idenvio, e.tipoenvio, e.fecha, e.idcomprador, v.marca, v.modelo, v.foto, ev.idestadoenvio, ev.descripcion as status, p.nombre, p.apellido, d.descripcion as destino ");
+                query.Append("FROM envio e ");
+                query.Append("INNER JOIN vehiculo v ");
+                query.Append("ON v.idvehiculo = e.idvehiculo ");
+                query.Append("INNER JOIN persona p ");
+                query.Append("ON p.idpersona = e.idvendedor ");
+                query.Append("INNER JOIN estadoenvio ev ");
+                query.Append("ON ev.idestadoenvio = e.estado ");
+                query.Append("INNER JOIN destino d ");
+                query.Append("ON e.iddestino = d.iddestino ");
+                query.Append("WHERE 1=1 ");
+                if (idcomprador.HasValue)
+                {
+                    query.Append("AND e.idcomprador = @idcomprador");
+                }
+                MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
+                if (idcomprador.HasValue)
+                {
+                    cmd.Parameters.AddWithValue("@idcomprador", idcomprador.Value);
+                }
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Envio envio = new Envio();
+                    envio.idenvio = int.Parse(reader["idenvio"].ToString());
+                    envio.tipoenvio = int.Parse(reader["tipoenvio"].ToString());
+                    envio.fecha = DateTime.Parse(reader["fecha"].ToString());
+                    envio.comprador.idpersona = int.Parse(reader["idcomprador"].ToString());
+                    envio.vehiculo.marca = reader["marca"].ToString();
+                    envio.vehiculo.modelo = reader["modelo"].ToString();
+                    if (ConexionBD.nonNull(reader, "foto"))
+                    {
+                        envio.vehiculo.foto = (byte[])reader["foto"];
+                    }
+                    envio.estado.idestadoenvio = int.Parse(reader["idestadoenvio"].ToString());
+                    envio.estado.descripcion = reader["status"].ToString();
+                    envio.vendedor.nombre = reader["nombre"].ToString();
+                    envio.vendedor.apellido = reader["apellido"].ToString();
+                    envio.destino.descripcion = reader["destino"].ToString();
+                    envios.Add(envio);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Mensaje.showError(ex.Message);
+            }
+            finally
+            {
+                ConexionBD.closeConexion();
+
+            }
+            return envios;
         }
     }
 }

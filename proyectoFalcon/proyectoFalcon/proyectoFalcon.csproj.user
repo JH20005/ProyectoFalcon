@@ -19,6 +19,9 @@
     <Compile Update="Vistas\DetalleVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vistas\EnvioCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Vistas\EnvioSeguimiento.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -44,6 +47,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\MantenimientoUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vistas\StatusSteps.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Vistas\VehiculoCard.cs">

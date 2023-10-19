@@ -119,6 +119,8 @@ namespace proyectoFalcon.Vistas
             Menu.addMenu(40, this.pnlCompras);
             Menu.addMenu(50, this.pnlEnvios);
             Menu.addMenu(60, this.pnlEnvio);
+            Menu.addMenu(70, this.pnlMisVehiculos);
+            Menu.addMenu(80, this.pnlMisEnvios);
         }
 
         private void showPantalla(UserControl userControl)
@@ -285,6 +287,11 @@ namespace proyectoFalcon.Vistas
             btnCompras.BackColor = Estilos.getSecundario();
             btnCompras.ForeColor = Estilos.getPrimario();
             showPantalla(new MisCompras());
+        }
+
+        private void btnMisVehiculos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
