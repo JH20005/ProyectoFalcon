@@ -44,7 +44,7 @@
             btnCotizar = new Button();
             pnlEnvios = new Panel();
             btnCompras = new Button();
-            panel7 = new Panel();
+            pnlEnvio = new Panel();
             btnEnvios = new Button();
             panel8 = new Panel();
             pnlCerrar = new Panel();
@@ -59,7 +59,7 @@
             pnlVehiculos.SuspendLayout();
             pnlCompras.SuspendLayout();
             pnlEnvios.SuspendLayout();
-            panel7.SuspendLayout();
+            pnlEnvio.SuspendLayout();
             pnlCerrar.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,7 +123,7 @@
             pnlMenu.Controls.Add(pnlVehiculos);
             pnlMenu.Controls.Add(pnlCompras);
             pnlMenu.Controls.Add(pnlEnvios);
-            pnlMenu.Controls.Add(panel7);
+            pnlMenu.Controls.Add(pnlEnvio);
             pnlMenu.Controls.Add(panel8);
             pnlMenu.Location = new Point(3, 117);
             pnlMenu.Name = "pnlMenu";
@@ -255,7 +255,7 @@
             btnCompras.ForeColor = Color.White;
             btnCompras.Image = Properties.Resources.menu_mis_compras;
             btnCompras.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCompras.Location = new Point(-3, 0);
+            btnCompras.Location = new Point(-6, -3);
             btnCompras.Name = "btnCompras";
             btnCompras.Size = new Size(267, 48);
             btnCompras.TabIndex = 5;
@@ -265,13 +265,13 @@
             btnCompras.UseVisualStyleBackColor = true;
             btnCompras.Click += btnCompras_Click_1;
             // 
-            // panel7
+            // pnlEnvio
             // 
-            panel7.Controls.Add(btnEnvios);
-            panel7.Location = new Point(3, 273);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(248, 48);
-            panel7.TabIndex = 1;
+            pnlEnvio.Controls.Add(btnEnvios);
+            pnlEnvio.Location = new Point(3, 273);
+            pnlEnvio.Name = "pnlEnvio";
+            pnlEnvio.Size = new Size(248, 48);
+            pnlEnvio.TabIndex = 1;
             // 
             // btnEnvios
             // 
@@ -282,7 +282,7 @@
             btnEnvios.ForeColor = Color.White;
             btnEnvios.Image = Properties.Resources.menu_envios;
             btnEnvios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEnvios.Location = new Point(-3, 0);
+            btnEnvios.Location = new Point(-6, 3);
             btnEnvios.Name = "btnEnvios";
             btnEnvios.Size = new Size(267, 48);
             btnEnvios.TabIndex = 4;
@@ -373,7 +373,7 @@
             pnlVehiculos.ResumeLayout(false);
             pnlCompras.ResumeLayout(false);
             pnlEnvios.ResumeLayout(false);
-            panel7.ResumeLayout(false);
+            pnlEnvio.ResumeLayout(false);
             pnlCerrar.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -390,7 +390,7 @@
         private Button btnCerrarSesion;
         private Button btnInicio;
         private Panel panel8;
-        private Panel panel7;
+        private Panel pnlEnvio;
         private Panel pnlEnvios;
         private Panel pnlCompras;
         private Panel pnlVehiculos;

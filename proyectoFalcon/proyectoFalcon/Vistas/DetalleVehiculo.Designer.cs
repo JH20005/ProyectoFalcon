@@ -40,7 +40,7 @@
             rdbAduana = new RadioButton();
             rdbPais = new RadioButton();
             rdbComprar = new RadioButton();
-            cmdPais = new ComboBox();
+            cmbDestino = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -185,14 +185,14 @@
             rdbComprar.UseVisualStyleBackColor = true;
             rdbComprar.CheckedChanged += rdbComprar_CheckedChanged;
             // 
-            // cmdPais
+            // cmbDestino
             // 
-            cmdPais.FormattingEnabled = true;
-            cmdPais.Location = new Point(373, 155);
-            cmdPais.Name = "cmdPais";
-            cmdPais.Size = new Size(289, 23);
-            cmdPais.TabIndex = 51;
-            cmdPais.Visible = false;
+            cmbDestino.FormattingEnabled = true;
+            cmbDestino.Location = new Point(373, 155);
+            cmbDestino.Name = "cmbDestino";
+            cmbDestino.Size = new Size(289, 23);
+            cmbDestino.TabIndex = 51;
+            cmbDestino.Visible = false;
             // 
             // DetalleVehiculo
             // 
@@ -200,7 +200,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
             ClientSize = new Size(674, 288);
-            Controls.Add(cmdPais);
+            Controls.Add(cmbDestino);
             Controls.Add(panel1);
             Controls.Add(lblVendedor);
             Controls.Add(label7);
@@ -237,6 +237,6 @@
         private RadioButton rdbAduana;
         private RadioButton rdbPais;
         private RadioButton rdbComprar;
-        private ComboBox cmdPais;
+        private ComboBox cmbDestino;
     }
 }

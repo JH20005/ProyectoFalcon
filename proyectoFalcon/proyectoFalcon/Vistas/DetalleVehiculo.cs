@@ -17,6 +17,8 @@ namespace proyectoFalcon.Vistas
     {
         Vehiculo vehiculo;
         ACCION? accion;
+        List<Pais> paises;
+        List<Aduana> aduanas;
 
         public DetalleVehiculo(Vehiculo vehiculo)
         {
@@ -27,6 +29,8 @@ namespace proyectoFalcon.Vistas
 
         public void initPantalla()
         {
+            paises = Pais.getPaises();
+            aduanas = Aduana.getAduanas();
             vehiculo.idvendedor = getVendedor();
             lblMarca.Text = vehiculo.marca;
             lblModelo.Text = vehiculo.modelo;
@@ -40,6 +44,7 @@ namespace proyectoFalcon.Vistas
             {
                 pbFoto.Image = Resources.no_image;
             }
+
         }
 
         private Persona getVendedor()
@@ -60,6 +65,23 @@ namespace proyectoFalcon.Vistas
             compra.comprador = comprador;
             compra.vendedor = vehiculo.idvendedor;
             return compra;
+        }
+
+        private Envio getEnvio(int tipoenvio)
+        {
+            Envio envio = new Envio();
+            envio.tipoenvio = tipoenvio;
+            envio.vehiculo = vehiculo;
+            envio.vendedor = vehiculo.idvendedor;
+            Persona comprador = Persona.buscarPersona(null, Sesion.getUsuarioLogueado().username);
+            envio.comprador = comprador;
+            EstadosEnvio estado = new EstadosEnvio();
+            estado.idestadoenvio = 10;
+            envio.estado = estado;
+            Destino destino = new Destino();
+            destino.iddestino = int.Parse(cmbDestino.SelectedValue.ToString());
+            envio.destino = destino;
+            return envio;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -83,10 +105,18 @@ namespace proyectoFalcon.Vistas
                         }
                     case ACCION.ENVIAR_PAIS:
                         {
+                            getEnvio(0).guardarEnvio();
+                            vehiculo.idestado.idestadovehiculo = 20;
+                            vehiculo.actualizarVehiculo();
+                            Mensaje.showInfo("Enviado con éxito, revisar lista de envios.");
                             break;
                         }
                     case ACCION.ENVIAR_ADUANA:
                         {
+                            getEnvio(1).guardarEnvio();
+                            vehiculo.idestado.idestadovehiculo = 20;
+                            vehiculo.actualizarVehiculo();
+                            Mensaje.showInfo("Enviado con éxito, revisar lista de envios.");
                             break;
                         }
                 }
@@ -95,19 +125,25 @@ namespace proyectoFalcon.Vistas
 
         private void rdbComprar_CheckedChanged(object sender, EventArgs e)
         {
-            cmdPais.Visible = false;
+            cmbDestino.Visible = false;
             accion = ACCION.COMPRAR;
         }
 
         private void rdbPais_CheckedChanged(object sender, EventArgs e)
         {
-            cmdPais.Visible = true;
+            cmbDestino.DataSource = paises;
+            cmbDestino.ValueMember = "iddestino";
+            cmbDestino.DisplayMember = "descripcion";
+            cmbDestino.Visible = true;
             accion = ACCION.ENVIAR_PAIS;
         }
 
         private void rdbAduana_CheckedChanged(object sender, EventArgs e)
         {
-            cmdPais.Visible = true;
+            cmbDestino.DataSource = aduanas;
+            cmbDestino.ValueMember = "iddestino";
+            cmbDestino.DisplayMember = "descripcion";
+            cmbDestino.Visible = true;
             accion = ACCION.ENVIAR_ADUANA;
         }
     }

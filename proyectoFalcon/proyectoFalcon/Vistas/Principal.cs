@@ -118,6 +118,7 @@ namespace proyectoFalcon.Vistas
             Menu.addMenu(30, this.pnlVehiculos);
             Menu.addMenu(40, this.pnlCompras);
             Menu.addMenu(50, this.pnlEnvios);
+            Menu.addMenu(60, this.pnlEnvio);
         }
 
         private void showPantalla(UserControl userControl)
