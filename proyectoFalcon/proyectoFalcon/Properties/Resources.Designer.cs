@@ -63,6 +63,16 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actualizar_estado {
+            get {
+                object obj = ResourceManager.GetObject("actualizar_estado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_adelante {
             get {
                 object obj = ResourceManager.GetObject("icono_adelante", resourceCulture);

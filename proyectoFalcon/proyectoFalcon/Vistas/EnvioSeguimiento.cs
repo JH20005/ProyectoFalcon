@@ -25,9 +25,9 @@ namespace proyectoFalcon.Vistas
         {
             Persona c = Persona.buscarPersona(null, Sesion.getUsuarioLogueado().username);
             lstMisEnvios.Controls.Clear();
-            Envio.buscarEnvios(c.idpersona).ForEach(envio =>
+            Envio.buscarEnvios(c.idpersona, null).ForEach(envio =>
             {
-                lstMisEnvios.Controls.Add(new EnvioCard(envio, this));
+                lstMisEnvios.Controls.Add(new EnvioCard(envio, this, null));
             });
         }
 

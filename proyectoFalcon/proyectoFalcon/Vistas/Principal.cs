@@ -79,7 +79,7 @@ namespace proyectoFalcon.Vistas
                             btnMisVehiculos.Image = Resources.menu_vehiculos_selected;
                             btnMisVehiculos.BackColor = Estilos.getSecundario();
                             btnMisVehiculos.ForeColor = Estilos.getPrimario();
-                            showPantalla(new MisVehiculos());
+                            showPantalla(new MantenimientoVehiculos(false));
                             break;
                         }
                 }
@@ -270,7 +270,7 @@ namespace proyectoFalcon.Vistas
             btnVehiculos.Image = Resources.menu_vehiculos_selected;
             btnVehiculos.BackColor = Estilos.getSecundario();
             btnVehiculos.ForeColor = Estilos.getPrimario();
-            showPantalla(new MantenimientoVehiculos());
+            showPantalla(new MantenimientoVehiculos(true));
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -310,7 +310,7 @@ namespace proyectoFalcon.Vistas
             btnMisVehiculos.Image = Resources.menu_vehiculos_selected;
             btnMisVehiculos.BackColor = Estilos.getSecundario();
             btnMisVehiculos.ForeColor = Estilos.getPrimario();
-            showPantalla(new MisVehiculos());
+            showPantalla(new MantenimientoVehiculos(false));
         }
 
         private void btnMisEnvios_Click(object sender, EventArgs e)

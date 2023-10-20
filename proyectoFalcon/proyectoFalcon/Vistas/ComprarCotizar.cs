@@ -22,7 +22,7 @@ namespace proyectoFalcon.Vistas
         public void loadData()
         {
             gridVehiculos.Controls.Clear();
-            Vehiculo.buscarVehiculos(10).ForEach(v =>
+            Vehiculo.buscarVehiculos(10, null).ForEach(v =>
             {
                 gridVehiculos.Controls.Add(new VehiculoCard(v, null));
             });

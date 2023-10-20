@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using proyectoFalcon.Utils;
@@ -56,7 +58,7 @@ namespace proyectoFalcon.Modelos
             }
         }
 
-        public static List<Envio> buscarEnvios(int? idcomprador)
+        public static List<Envio> buscarEnvios(int? idcomprador, int? idvendedor)
         {
             List<Envio> envios = new List<Envio>();
             try
@@ -78,10 +80,18 @@ namespace proyectoFalcon.Modelos
                 {
                     query.Append("AND e.idcomprador = @idcomprador");
                 }
+                if (idvendedor.HasValue)
+                {
+                    query.Append("AND e.idvendedor = @idvendedor");
+                }
                 MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
                 if (idcomprador.HasValue)
                 {
                     cmd.Parameters.AddWithValue("@idcomprador", idcomprador.Value);
+                }
+                if (idvendedor.HasValue)
+                {
+                    cmd.Parameters.AddWithValue("@idvendedor", idvendedor.Value);
                 }
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -116,6 +126,30 @@ namespace proyectoFalcon.Modelos
 
             }
             return envios;
+        }
+
+        public void actualizarEstadoEnvio()
+        {
+            try
+            {
+                MySqlConnection conexion = ConexionBD.openConexion();
+                StringBuilder query = new StringBuilder();
+                query.Append("UPDATE envio ");
+                query.Append("SET estado = @idestado ");
+                query.Append("WHERE idenvio = @idenvio");
+                MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
+                cmd.Parameters.AddWithValue("@idestado", estado.idestadoenvio);
+                cmd.Parameters.AddWithValue("@idenvio", idenvio);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Mensaje.showError(ex.Message);
+            }
+            finally
+            {
+                ConexionBD.closeConexion();
+            }
         }
     }
 }

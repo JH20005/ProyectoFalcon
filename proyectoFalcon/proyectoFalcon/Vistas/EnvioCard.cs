@@ -14,14 +14,16 @@ namespace proyectoFalcon.Vistas
     public partial class EnvioCard : UserControl
     {
         Envio envio;
-        EnvioSeguimiento ev;
+        EnvioSeguimiento? ev;
+        MisEnvios? me;
 
-        public EnvioCard(Envio envio, EnvioSeguimiento ev)
+        public EnvioCard(Envio envio, EnvioSeguimiento? ev, MisEnvios? me)
         {
             InitializeComponent();
             this.envio = envio;
             this.ev = ev;
             initData();
+            this.me = me;
         }
 
         public void initData()
@@ -34,7 +36,16 @@ namespace proyectoFalcon.Vistas
 
         private void btnVerEstado_Click(object sender, EventArgs e)
         {
-            this.ev.renderStatus(envio);
+            if(this.ev != null)
+            {
+                this.ev.renderStatus(envio);
+            }
+            if(this.me != null)
+            {
+                this.me.renderStatus(envio);
+                this.me.selectEnvio(envio);
+                this.me.habilitarEnvio();
+            }
         }
     }
 }

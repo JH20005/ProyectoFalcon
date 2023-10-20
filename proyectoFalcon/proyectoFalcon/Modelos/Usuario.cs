@@ -56,6 +56,7 @@ namespace proyectoFalcon.Models
                         usuario.rol = new Rol();
                         usuario.username = reader["username"].ToString();
                         usuario.tipo = int.Parse(reader["idrol"].ToString());
+                        usuario.rol.idrol = usuario.tipo;
                         usuario.rol.descripcion = reader["descripcion"].ToString();
                         Sesion.setUsuarioLogueado(usuario);
                     }

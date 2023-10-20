@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proyectoFalcon.Modelos;
+using proyectoFalcon.Utils;
 
 namespace proyectoFalcon.Vistas
 {
@@ -16,5 +18,6 @@ namespace proyectoFalcon.Vistas
         {
             InitializeComponent();
         }
+
     }
 }

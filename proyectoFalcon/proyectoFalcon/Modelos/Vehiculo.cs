@@ -29,7 +29,7 @@ namespace proyectoFalcon.Modelos
             idvendedor = new Persona();
         }
 
-        public static List<Vehiculo> buscarVehiculos(int? idestado)
+        public static List<Vehiculo> buscarVehiculos(int? idestado, int? idvendedor)
         {
             List<Vehiculo> vehiculos = new List<Vehiculo>();
             try
@@ -38,14 +38,23 @@ namespace proyectoFalcon.Modelos
                 StringBuilder query = new StringBuilder();
                 query.Append("SELECT v.idvehiculo, v.marca, v.modelo, v.year, v.fechapublicacion, v.precio, v.foto, v.idestado, v.idvendedor ");
                 query.Append("FROM vehiculo v ");
+                query.Append("WHERE 1=1 ");
                 if (idestado.HasValue)
                 {
-                    query.Append("WHERE idestado = @idestado");
+                    query.Append("AND idestado = @idestado");
+                }
+                if (idvendedor.HasValue)
+                {
+                    query.Append("AND idvendedor = @idvendedor");
                 }
                 MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
                 if (idestado.HasValue)
                 {
                     cmd.Parameters.AddWithValue("@idestado", idestado.Value);
+                }
+                if (idvendedor.HasValue)
+                {
+                    cmd.Parameters.AddWithValue("@idvendedor", idvendedor.Value);
                 }
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())

@@ -29,11 +29,23 @@ namespace proyectoFalcon.Vistas
 
         private void initPantalla()
         {
+
             estados = EstadosVehiculo.getEstadosVehiculo();
+            if (Sesion.getUsuarioLogueado().rol.idrol == 10)
+            {
+                vendedores = Persona.buscarPersonas(30);             
+            }
+            else
+            {
+                vendedores.Clear();
+                vendedores.Add(Persona.buscarPersona(null, Sesion.getUsuarioLogueado().username));
+                EstadosVehiculo ev = new EstadosVehiculo();
+                cmbEstadosVehiculo.Enabled = false;
+                cmbVendedor.Enabled = false;
+            }
             cmbEstadosVehiculo.DataSource = estados;
             cmbEstadosVehiculo.ValueMember = "idestadovehiculo";
             cmbEstadosVehiculo.DisplayMember = "descripcion";
-            vendedores = Persona.buscarPersonas(30);
             vendedores.ForEach(v => v.nombre += " " + v.apellido);
             cmbVendedor.DataSource = vendedores;
             cmbVendedor.ValueMember = "idpersona";

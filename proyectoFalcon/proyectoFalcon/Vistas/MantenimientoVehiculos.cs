@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using proyectoFalcon.Modelos;
 using proyectoFalcon.Properties;
+using proyectoFalcon.Utils;
 
 namespace proyectoFalcon.Vistas
 {
     public partial class MantenimientoVehiculos : UserControl
     {
-        int actualPage;
-        const int size = 8;
-        public MantenimientoVehiculos()
+        bool isAdmin;
+        public MantenimientoVehiculos(bool isAdmin)
         {
-            actualPage = 0;
-            InitializeComponent();
+            this.isAdmin = isAdmin;
+            InitializeComponent();           
             loadData();
         }
 
         public void loadData()
         {
             gridVehiculos.Controls.Clear();
-            Vehiculo.buscarVehiculos(null).ForEach(v =>
+            Vehiculo.buscarVehiculos(null, !isAdmin ? Persona.buscarPersona(null, Sesion.getUsuarioLogueado().username).idpersona : null).ForEach(v =>
             {
                 gridVehiculos.Controls.Add(new VehiculoCard(v, this));
             });
