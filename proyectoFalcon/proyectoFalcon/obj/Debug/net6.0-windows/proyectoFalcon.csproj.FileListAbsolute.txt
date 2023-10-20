@@ -87,3 +87,5 @@ D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windo
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.ConfirmarPago.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.EnvioCard.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.StatusSteps.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MisEnvios.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MisVehiculos.resources

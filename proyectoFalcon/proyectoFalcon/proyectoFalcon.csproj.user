@@ -40,6 +40,12 @@
     <Compile Update="Vistas\MisCompras.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Vistas\MisEnvios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vistas\MisVehiculos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Vistas\NuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

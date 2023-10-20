@@ -74,6 +74,12 @@ namespace proyectoFalcon.Vistas
                         }
                     case 30:
                         {
+                            appPanel.Controls.Clear();
+                            reiniciarSidebar();
+                            btnMisVehiculos.Image = Resources.menu_vehiculos_selected;
+                            btnMisVehiculos.BackColor = Estilos.getSecundario();
+                            btnMisVehiculos.ForeColor = Estilos.getPrimario();
+                            showPantalla(new MisVehiculos());
                             break;
                         }
                 }
@@ -155,6 +161,14 @@ namespace proyectoFalcon.Vistas
             btnCompras.Image = Resources.menu_mis_compras;
             btnCompras.BackColor = Estilos.getPrimario();
             btnCompras.ForeColor = Estilos.getSecundario();
+
+            btnMisVehiculos.Image = Resources.menu_vehiculos;
+            btnMisVehiculos.BackColor = Estilos.getPrimario();
+            btnMisVehiculos.ForeColor = Estilos.getSecundario();
+
+            btnMisEnvios.Image = Resources.menu_envios;
+            btnMisEnvios.BackColor = Estilos.getPrimario();
+            btnMisEnvios.ForeColor = Estilos.getSecundario();
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -291,7 +305,22 @@ namespace proyectoFalcon.Vistas
 
         private void btnMisVehiculos_Click(object sender, EventArgs e)
         {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnMisVehiculos.Image = Resources.menu_vehiculos_selected;
+            btnMisVehiculos.BackColor = Estilos.getSecundario();
+            btnMisVehiculos.ForeColor = Estilos.getPrimario();
+            showPantalla(new MisVehiculos());
+        }
 
+        private void btnMisEnvios_Click(object sender, EventArgs e)
+        {
+            appPanel.Controls.Clear();
+            reiniciarSidebar();
+            btnMisEnvios.Image = Resources.menu_envios_selected;
+            btnMisEnvios.BackColor = Estilos.getSecundario();
+            btnMisEnvios.ForeColor = Estilos.getPrimario();
+            showPantalla(new MisEnvios());
         }
     }
 }
