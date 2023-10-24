@@ -38,6 +38,10 @@
             txtPassword = new TextBox();
             button2 = new Button();
             button3 = new Button();
+            pictureBox1 = new PictureBox();
+            label4 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -102,6 +106,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 128);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(348, 1);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
@@ -150,6 +156,27 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.FalconIcon;
+            pictureBox1.Location = new Point(94, 69);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(147, 134);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(106, 290);
+            label4.Name = "label4";
+            label4.Size = new Size(121, 40);
+            label4.TabIndex = 1;
+            label4.Text = "SGIVAU";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
@@ -171,6 +198,9 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,5 +216,7 @@
         private TextBox txtPassword;
         private Button button2;
         private Button button3;
+        private PictureBox pictureBox1;
+        private Label label4;
     }
 }

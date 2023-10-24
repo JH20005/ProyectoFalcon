@@ -22,7 +22,7 @@ namespace proyectoFalcon.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace proyectoFalcon.Properties {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("proyectoFalcon.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace proyectoFalcon.Properties {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap actualizar_estado {
+        public static System.Drawing.Bitmap actualizar_estado {
             get {
                 object obj = ResourceManager.GetObject("actualizar_estado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,17 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_adelante {
+        public static System.Drawing.Bitmap FalconIcon {
+            get {
+                object obj = ResourceManager.GetObject("FalconIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icono_adelante {
             get {
                 object obj = ResourceManager.GetObject("icono_adelante", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +93,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_agregar {
+        public static System.Drawing.Bitmap icono_agregar {
             get {
                 object obj = ResourceManager.GetObject("icono_agregar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +103,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_agregar_filled {
+        public static System.Drawing.Bitmap icono_agregar_filled {
             get {
                 object obj = ResourceManager.GetObject("icono_agregar_filled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +113,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_atras {
+        public static System.Drawing.Bitmap icono_atras {
             get {
                 object obj = ResourceManager.GetObject("icono_atras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +123,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_comprado {
+        public static System.Drawing.Bitmap icono_comprado {
             get {
                 object obj = ResourceManager.GetObject("icono_comprado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +133,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_comprar {
+        public static System.Drawing.Bitmap icono_comprar {
             get {
                 object obj = ResourceManager.GetObject("icono_comprar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +143,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_eliminar {
+        public static System.Drawing.Bitmap icono_eliminar {
             get {
                 object obj = ResourceManager.GetObject("icono_eliminar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +153,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_guardar {
+        public static System.Drawing.Bitmap icono_guardar {
             get {
                 object obj = ResourceManager.GetObject("icono_guardar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +163,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_reiniciar {
+        public static System.Drawing.Bitmap icono_reiniciar {
             get {
                 object obj = ResourceManager.GetObject("icono_reiniciar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +173,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_status_10 {
+        public static System.Drawing.Bitmap icono_status_10 {
             get {
                 object obj = ResourceManager.GetObject("icono_status_10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +183,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_status_20 {
+        public static System.Drawing.Bitmap icono_status_20 {
             get {
                 object obj = ResourceManager.GetObject("icono_status_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +193,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_status_30 {
+        public static System.Drawing.Bitmap icono_status_30 {
             get {
                 object obj = ResourceManager.GetObject("icono_status_30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +203,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_status_40 {
+        public static System.Drawing.Bitmap icono_status_40 {
             get {
                 object obj = ResourceManager.GetObject("icono_status_40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +213,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_status_50 {
+        public static System.Drawing.Bitmap icono_status_50 {
             get {
                 object obj = ResourceManager.GetObject("icono_status_50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +223,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap infolevel_error {
+        public static System.Drawing.Bitmap infolevel_error {
             get {
                 object obj = ResourceManager.GetObject("infolevel_error", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +233,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap infolevel_info {
+        public static System.Drawing.Bitmap infolevel_info {
             get {
                 object obj = ResourceManager.GetObject("infolevel_info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +243,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap infolevel_warning {
+        public static System.Drawing.Bitmap infolevel_warning {
             get {
                 object obj = ResourceManager.GetObject("infolevel_warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +253,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_compras {
+        public static System.Drawing.Bitmap menu_compras {
             get {
                 object obj = ResourceManager.GetObject("menu_compras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +263,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_compras_selected {
+        public static System.Drawing.Bitmap menu_compras_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_compras_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +273,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_envios {
+        public static System.Drawing.Bitmap menu_envios {
             get {
                 object obj = ResourceManager.GetObject("menu_envios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +283,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_envios_selected {
+        public static System.Drawing.Bitmap menu_envios_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_envios_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +293,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_inicio {
+        public static System.Drawing.Bitmap menu_inicio {
             get {
                 object obj = ResourceManager.GetObject("menu_inicio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -293,7 +303,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_inicio_selected {
+        public static System.Drawing.Bitmap menu_inicio_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_inicio_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -303,7 +313,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_mis_compras {
+        public static System.Drawing.Bitmap menu_mis_compras {
             get {
                 object obj = ResourceManager.GetObject("menu_mis_compras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -313,7 +323,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_mis_compras_selected {
+        public static System.Drawing.Bitmap menu_mis_compras_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_mis_compras_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -323,7 +333,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_usuarios {
+        public static System.Drawing.Bitmap menu_usuarios {
             get {
                 object obj = ResourceManager.GetObject("menu_usuarios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -333,7 +343,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_usuarios_selected {
+        public static System.Drawing.Bitmap menu_usuarios_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_usuarios_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -343,7 +353,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_vehiculos {
+        public static System.Drawing.Bitmap menu_vehiculos {
             get {
                 object obj = ResourceManager.GetObject("menu_vehiculos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -353,7 +363,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_vehiculos_selected {
+        public static System.Drawing.Bitmap menu_vehiculos_selected {
             get {
                 object obj = ResourceManager.GetObject("menu_vehiculos_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -363,7 +373,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap no_image {
+        public static System.Drawing.Bitmap no_image {
             get {
                 object obj = ResourceManager.GetObject("no_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -373,7 +383,7 @@ namespace proyectoFalcon.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ver_24 {
+        public static System.Drawing.Bitmap ver_24 {
             get {
                 object obj = ResourceManager.GetObject("ver_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

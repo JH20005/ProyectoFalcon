@@ -13,6 +13,9 @@
     <Compile Update="Vistas\ComprarCotizar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Vistas\ConexionParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vistas\ConfirmarPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,5 +64,10 @@
     <Compile Update="Vistas\VehiculoCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Vistas\ConexionParametros.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

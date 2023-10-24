@@ -1,5 +1,4 @@
 using proyectoFalcon.Models;
-using proyectoFalcon.Properties.Usuario;
 using proyectoFalcon.Utils;
 using proyectoFalcon.Vistas;
 using System.Data.SqlClient;
@@ -41,7 +40,7 @@ namespace proyectoFalcon
         private void button2_Click(object sender, EventArgs e)
         {
             NuevoUsuario nuevo = new NuevoUsuario();
-            nuevo.Show();
+            nuevo.ShowDialog();
 
 
         }

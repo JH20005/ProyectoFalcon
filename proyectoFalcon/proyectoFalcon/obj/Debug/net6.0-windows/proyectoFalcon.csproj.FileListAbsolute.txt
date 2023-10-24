@@ -29,7 +29,6 @@ D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windo
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\MySql.Data.xml
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Resources.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Login.resources
-D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Properties.Usuario.NuevoUsuario.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.csproj.GenerateResource.cache
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.GeneratedMSBuildEditorConfig.editorconfig
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.AssemblyInfoInputs.cache
@@ -89,3 +88,6 @@ D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windo
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.StatusSteps.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MisEnvios.resources
 D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.MisVehiculos.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\bin\Debug\net6.0-windows\proyectoFalcon.dll.config
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.ConexionParametros.resources
+D:\Proyectos\ProyectoFalcon\proyectoFalcon\proyectoFalcon\obj\Debug\net6.0-windows\proyectoFalcon.Vistas.NuevoUsuario.resources

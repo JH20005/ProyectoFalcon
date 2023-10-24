@@ -153,7 +153,7 @@
             txtNumCuenta.BorderStyle = BorderStyle.None;
             txtNumCuenta.ForeColor = Color.White;
             txtNumCuenta.Location = new Point(10, 142);
-            txtNumCuenta.Mask = "0000-0000-0000-000";
+            txtNumCuenta.Mask = "0000-0000-0000-0000";
             txtNumCuenta.Name = "txtNumCuenta";
             txtNumCuenta.Size = new Size(362, 16);
             txtNumCuenta.TabIndex = 3;

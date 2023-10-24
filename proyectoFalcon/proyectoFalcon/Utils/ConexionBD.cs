@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,10 @@ namespace proyectoFalcon.Utils
     public class ConexionBD
     {
 
-        private static string server = "127.0.0.1";
-        private static string database = "falcon";
-        private static string databaseUser = "root";
-        private static string databasePassword = "admin";//admin
+        public static string server;
+        private static string database;
+        private static string databaseUser;
+        private static string databasePassword;//admin
         private static MySqlConnection conexion = new MySqlConnection();
 
         public static void conectarBD()
@@ -26,6 +27,22 @@ namespace proyectoFalcon.Utils
             conexionString.AppendFormat("pwd = {0};", databasePassword);
             Console.WriteLine(conexionString.ToString());
             conexion.ConnectionString = conexionString.ToString();
+        }
+
+        public static void setParams()
+        {
+            server = ConfigurationManager.AppSettings["host"];
+            database = ConfigurationManager.AppSettings["name"];
+            databaseUser = ConfigurationManager.AppSettings["user"];
+            databasePassword = ConfigurationManager.AppSettings["pass"];
+        }
+
+        public static void setNewParams(string host, string name, string user, string pass)
+        {
+            server = host;
+            database = name;
+            databaseUser = user;
+            databasePassword = pass;
         }
 
         public static MySqlConnection openConexion()

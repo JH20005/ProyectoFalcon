@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using proyectoFalcon.Utils;
+using proyectoFalcon.Vistas;
 
 namespace proyectoFalcon
 {
@@ -16,12 +17,12 @@ namespace proyectoFalcon
                 // To customize application configuration such as set high DPI settings or default font,
                 // see https://aka.ms/applicationconfiguration.
                 ApplicationConfiguration.Initialize();
-                initConexion();
-                Application.Run(new Login());
+                //initConexion();
+                Application.Run(new ConexionParametros());
             }
             catch(Exception ex)
             {
-                Mensaje.showError("No se puede iniciar la aplicación - " + ex.Message);
+                Mensaje.showError("No se puede iniciar la aplicación - " + ex.Message);               
             }
 
         }
@@ -30,13 +31,14 @@ namespace proyectoFalcon
         {
             try
             {
+                ConexionBD.setParams();
                 ConexionBD.conectarBD();
-                ConexionBD.openConexion();
-                
+                ConexionBD.openConexion();              
             }
             catch(Exception ex)
             {
-                throw;
+                ConexionParametros cp = new ConexionParametros();
+                cp.ShowDialog();
             }
             finally
             {
