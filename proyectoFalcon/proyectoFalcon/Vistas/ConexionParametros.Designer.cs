@@ -37,7 +37,6 @@
             txtPass = new TextBox();
             label4 = new Label();
             button1 = new Button();
-            button2 = new Button();
             label5 = new Label();
             button3 = new Button();
             SuspendLayout();
@@ -115,23 +114,9 @@
             button1.Name = "button1";
             button1.Size = new Size(116, 46);
             button1.TabIndex = 8;
-            button1.Text = "Probar conexión";
+            button1.Text = "Continuar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.White;
-            button2.Cursor = Cursors.Hand;
-            button2.Enabled = false;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(140, 250);
-            button2.Name = "button2";
-            button2.Size = new Size(116, 46);
-            button2.TabIndex = 9;
-            button2.Text = "Continuar";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // label5
             // 
@@ -164,7 +149,6 @@
             ClientSize = new Size(391, 307);
             Controls.Add(button3);
             Controls.Add(label5);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(txtPass);
             Controls.Add(label4);
@@ -193,7 +177,6 @@
         private TextBox txtPass;
         private Label label4;
         private Button button1;
-        private Button button2;
         private Label label5;
         private Button button3;
     }

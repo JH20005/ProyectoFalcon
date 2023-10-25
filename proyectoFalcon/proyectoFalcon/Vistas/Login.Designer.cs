@@ -35,11 +35,11 @@
             label2 = new Label();
             label3 = new Label();
             panel1 = new Panel();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
             txtPassword = new TextBox();
             button2 = new Button();
             button3 = new Button();
-            pictureBox1 = new PictureBox();
-            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -78,7 +78,7 @@
             txtUsername.Location = new Point(52, 154);
             txtUsername.Margin = new Padding(4, 5, 4, 5);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(229, 31);
+            txtUsername.Size = new Size(236, 31);
             txtUsername.TabIndex = 2;
             // 
             // label2
@@ -113,6 +113,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(329, 424);
             panel1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(106, 290);
+            label4.Name = "label4";
+            label4.Size = new Size(121, 40);
+            label4.TabIndex = 1;
+            label4.Text = "SGIVAU";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.FalconIcon;
+            pictureBox1.Location = new Point(94, 69);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(147, 134);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // txtPassword
             // 
@@ -155,27 +176,6 @@
             button3.Text = "SALIR";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.FalconIcon;
-            pictureBox1.Location = new Point(94, 69);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(147, 134);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(106, 290);
-            label4.Name = "label4";
-            label4.Size = new Size(121, 40);
-            label4.TabIndex = 1;
-            label4.Text = "SGIVAU";
             // 
             // Login
             // 

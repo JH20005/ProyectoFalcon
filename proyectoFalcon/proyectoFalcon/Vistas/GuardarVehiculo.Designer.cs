@@ -46,6 +46,7 @@
             cmbVendedor = new ComboBox();
             label8 = new Label();
             txtPrecio = new TextBox();
+            lblError = new Label();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
             // 
@@ -54,11 +55,12 @@
             btnGuardar.BackColor = Color.FromArgb(255, 128, 128);
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.DialogResult = DialogResult.OK;
+            btnGuardar.Enabled = false;
             btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 128);
             btnGuardar.FlatAppearance.BorderSize = 0;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(405, 325);
+            btnGuardar.Location = new Point(405, 372);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(91, 33);
             btnGuardar.TabIndex = 27;
@@ -76,6 +78,7 @@
             pbFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbFoto.TabIndex = 26;
             pbFoto.TabStop = false;
+            pbFoto.LoadCompleted += pbFoto_LoadCompleted;
             // 
             // btnAdjuntar
             // 
@@ -120,6 +123,8 @@
             txtYear.Name = "txtYear";
             txtYear.Size = new Size(190, 23);
             txtYear.TabIndex = 21;
+            txtYear.MaskInputRejected += txtYear_MaskInputRejected;
+            txtYear.TextChanged += txtYear_TextChanged;
             // 
             // txtModelo
             // 
@@ -127,6 +132,7 @@
             txtModelo.Name = "txtModelo";
             txtModelo.Size = new Size(190, 23);
             txtModelo.TabIndex = 20;
+            txtModelo.TextChanged += txtModelo_TextChanged;
             // 
             // txtMarca
             // 
@@ -134,6 +140,7 @@
             txtMarca.Name = "txtMarca";
             txtMarca.Size = new Size(190, 23);
             txtMarca.TabIndex = 19;
+            txtMarca.TextChanged += txtMarca_TextChanged;
             // 
             // label4
             // 
@@ -193,7 +200,7 @@
             btnSalir.FlatAppearance.BorderSize = 0;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(248, 325);
+            btnSalir.Location = new Point(248, 372);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(91, 33);
             btnSalir.TabIndex = 28;
@@ -235,13 +242,24 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(190, 23);
             txtPrecio.TabIndex = 33;
+            txtPrecio.TextChanged += txtPrecio_TextChanged;
+            // 
+            // lblError
+            // 
+            lblError.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblError.ForeColor = Color.Red;
+            lblError.Location = new Point(23, 326);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(698, 30);
+            lblError.TabIndex = 34;
             // 
             // GuardarVehiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            ClientSize = new Size(760, 383);
+            ClientSize = new Size(760, 417);
+            Controls.Add(lblError);
             Controls.Add(txtPrecio);
             Controls.Add(label8);
             Controls.Add(cmbVendedor);
@@ -289,5 +307,6 @@
         private ComboBox cmbVendedor;
         private Label label8;
         private TextBox txtPrecio;
+        private Label lblError;
     }
 }

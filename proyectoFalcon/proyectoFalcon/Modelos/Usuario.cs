@@ -97,5 +97,26 @@ namespace proyectoFalcon.Models
             }
         }
 
+        public static void eliminarUsuario(string username)
+        {
+            try
+            {
+                MySqlConnection conexion = ConexionBD.openConexion();
+                StringBuilder query = new StringBuilder();
+                query.Append("DELETE FROM usuarios ");
+                query.Append("WHERE username = @username");
+                MySqlCommand cmd = new MySqlCommand(query.ToString(), conexion);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Mensaje.showError(ex.Message);
+            }
+            finally
+            {
+                ConexionBD.closeConexion();
+            }
+        }
     }
 }

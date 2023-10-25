@@ -19,6 +19,7 @@ namespace proyectoFalcon.Vistas
     public partial class MantenimientoUsuarios : UserControl
     {
         int? id = null;
+        string? username = null;
         List<Rol> roles = new List<Rol>();
 
         public MantenimientoUsuarios()
@@ -94,6 +95,7 @@ namespace proyectoFalcon.Vistas
                 btnEliminar.Enabled = true;
                 pnlUserInfo.Visible = false;
                 id = int.Parse(lstUsuarios.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                username = lstUsuarios.Rows[e.RowIndex].Cells["usuario"].Value.ToString();
                 lblId.Text = lstUsuarios.Rows[e.RowIndex].Cells["ID"].Value.ToString();
                 txtNombre.Text = lstUsuarios.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 txtApellido.Text = lstUsuarios.Rows[e.RowIndex].Cells["apellido"].Value.ToString();
@@ -120,45 +122,27 @@ namespace proyectoFalcon.Vistas
         {
             string pattern = @"^\d{10}$";
 
-            if (txtNombre.Text.Equals(""))
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 //MessageBox.Show("Debe agregar la Nombre.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Mensaje.showWarning("waning");
+                Mensaje.showWarning("Debe agregar un nombre");
                 return false;
             }
-            if (txtApellido.Text.Equals(""))
+            if (string.IsNullOrEmpty(txtApellido.Text))
             {
-                MessageBox.Show("Debe agregar la Apellido.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Mensaje.showWarning("Debe agregar un apellido");
 
                 return false;
             }
-            if (txtTelefono.Text.Equals(""))
+            if (id == null && string.IsNullOrEmpty(txtUsername.Text))
             {
-                MessageBox.Show("Debe agregar el Telefono.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Mensaje.showWarning("Debe agregar un nombre de usuario");
 
                 return false;
             }
-            if (txtCorreo.Text.Equals(""))
+            if (id == null && string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("Debe agregar el Correo.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                return false;
-            }
-            if (txtUsername.Text.Equals(""))
-            {
-                MessageBox.Show("Debe agregar el Usuario.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                return false;
-            }
-            if (txtPassword.Text.Equals(""))
-            {
-                MessageBox.Show("Debe agregar el Contraseña.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                return false;
-            }
-            if (!Regex.IsMatch(txtTelefono.Text, pattern))
-            {
-                MessageBox.Show("El precio debe ser numerico.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Mensaje.showWarning("Debe agregar una contraseña");
 
                 return false;
             }
@@ -214,6 +198,7 @@ namespace proyectoFalcon.Vistas
         {
             pnlUserInfo.Visible = true;
             id = null;
+            username = null;
             lblId.Text = string.Empty;
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
@@ -228,6 +213,7 @@ namespace proyectoFalcon.Vistas
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Persona.eliminarPersona(id.Value);
+            Usuario.eliminarUsuario(username);
             reiniciar();
             loadData();
         }

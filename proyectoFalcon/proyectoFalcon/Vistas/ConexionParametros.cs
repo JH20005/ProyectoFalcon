@@ -40,13 +40,18 @@ namespace proyectoFalcon.Vistas
                 if (show)
                 {
                     Mensaje.showInfo("Conexión exitosa");
+                    this.Hide();
+                    changeConexionParametros();
+                    Login login = new Login();
+                    login.FormClosed += (s, args) => this.Close();
+                    login.Show();
                 }
-                button2.Enabled = true;
+                //button2.Enabled = true;
             }
             catch (Exception ex)
             {
                 Mensaje.showError("No se pudo conectar a la BD");
-                button2.Enabled = false;
+                //button2.Enabled = false;
             }
             finally
             {
@@ -57,11 +62,7 @@ namespace proyectoFalcon.Vistas
         private void button2_Click(object sender, EventArgs e)
         {
             initConexion(false);
-            this.Hide();
-            changeConexionParametros();
-            Login login = new Login();
-            login.FormClosed += (s, args) => this.Close();
-            login.Show();
+
         }
 
         private void changeConexionParametros()

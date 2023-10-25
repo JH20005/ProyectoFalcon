@@ -26,7 +26,7 @@ namespace proyectoFalcon.Modelos
                 StringBuilder query = new StringBuilder();
                 query.Append("SELECT ");
                 query.Append("(select count(username) from usuarios where idrol = 30) as qvendedores, ");
-                query.Append("(select count(username) from usuarios where idrol = 30) as qcompradores, ");
+                query.Append("(select count(username) from usuarios where idrol = 20) as qcompradores, ");
                 query.Append("(select count(idcompra) from compra) as qcompras, ");
                 query.Append("(select count(idenvio) from envio where tipoenvio = 0) as qenviospais, ");
                 query.Append("(select count(idenvio) from envio where tipoenvio = 1) as qenviosnaviera ");

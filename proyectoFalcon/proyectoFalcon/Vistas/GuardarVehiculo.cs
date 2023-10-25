@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace proyectoFalcon.Vistas
             estados = EstadosVehiculo.getEstadosVehiculo();
             if (Sesion.getUsuarioLogueado().rol.idrol == 10)
             {
-                vendedores = Persona.buscarPersonas(30);             
+                vendedores = Persona.buscarPersonas(30);
             }
             else
             {
@@ -78,6 +79,7 @@ namespace proyectoFalcon.Vistas
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
                 pbFoto.Image = new Bitmap(opnfd.FileName);
+                btnGuardar.Enabled = true;
             }
         }
 
@@ -97,37 +99,37 @@ namespace proyectoFalcon.Vistas
 
         private Boolean validar()
         {
+            btnGuardar.Enabled = true;
             string pattern = @"^\d+(\.\d+)?$";
 
-            if (txtMarca.Text.Equals(""))
+            if (string.IsNullOrEmpty(txtMarca.Text))
             {
-                //MessageBox.Show("Debe agregar la marca.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Mensaje.showWarning("Debe agregar la marca.");
-
+                btnGuardar.Enabled = false;
                 return false;
             }
-            if (txtModelo.Text.Equals(""))
+            if (string.IsNullOrEmpty(txtModelo.Text))
             {
-                MessageBox.Show("Debe agregar la Modelo.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                btnGuardar.Enabled = false;
                 return false;
             }
-            if (txtYear.Text.Equals(""))
+            if (string.IsNullOrEmpty(txtYear.Text))
             {
-                MessageBox.Show("Debe agregar el año.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                btnGuardar.Enabled = false;
                 return false;
             }
-            if (txtPrecio.Text.Equals(""))
+            if (string.IsNullOrEmpty(txtPrecio.Text))
             {
-                MessageBox.Show("Debe agregar el Precio.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                btnGuardar.Enabled = false;
                 return false;
             }
             if (!Regex.IsMatch(txtPrecio.Text, pattern))
             {
-                MessageBox.Show("El precio debe ser numerico.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                btnGuardar.Enabled = false;
+                return false;
+            }
+            if (pbFoto.Image == null)
+            {
+                btnGuardar.Enabled = false;
                 return false;
             }
             return true;
@@ -138,10 +140,6 @@ namespace proyectoFalcon.Vistas
             if (!validar())
             {
                 return;
-            }
-            else
-            {
-
             }
             string marca = txtMarca.Text;
             string modelo = txtModelo.Text;
@@ -171,6 +169,36 @@ namespace proyectoFalcon.Vistas
                 vehiculo.idVehiculo = this.vehiculo.idVehiculo;
                 vehiculo.actualizarVehiculo();
             }
+        }
+
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+            validar();
+        }
+
+        private void txtModelo_TextChanged(object sender, EventArgs e)
+        {
+            validar();
+        }
+
+        private void txtYear_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            validar();
+        }
+
+        private void pbFoto_LoadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            validar();
+        }
+
+        private void txtYear_TextChanged(object sender, EventArgs e)
+        {
+            validar();
         }
     }
 }

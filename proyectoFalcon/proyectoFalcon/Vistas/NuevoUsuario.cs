@@ -22,50 +22,86 @@ namespace proyectoFalcon.Vistas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool ok = true;
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string telefono = txtTelefono.Text;
-            string correo = txtCorreo.Text;
-            string username = textBox1.Text;
-            string password = maskedTextBox1.Text;
-            int idrol = 0;
+
+            Persona persona = new Persona();
+            Usuario usuario = new Usuario();
+            persona.usuario = usuario;
+            Rol rol = new Rol();
+            usuario.rol = rol;
+
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                Mensaje.showWarning("El nombre no puede estar vacío");
+                return;
+            }
+            else
+            {
+                persona.nombre = txtNombre.Text;
+            }
+
+            if (string.IsNullOrEmpty(txtApellido.Text))
+            {
+                Mensaje.showWarning("El apellido no puede estar vacío");
+                return;
+            }
+            else
+            {
+                persona.apellido = txtApellido.Text;
+            }
+
+            persona.telefono = txtTelefono.Text;
+            persona.correo = txtCorreo.Text;
+
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                Mensaje.showWarning("El nombre de usuario no puede estar vacío");
+                return;
+            }
+            else
+            {
+                usuario.username = textBox1.Text;
+            }
+
+            if (string.IsNullOrEmpty(maskedTextBox1.Text))
+            {
+                Mensaje.showWarning("La contraseña no puede estar vacía");
+                return;
+            }
+            else
+            {
+                usuario.password = maskedTextBox1.Text;
+            }
+            rol.idrol = 0;
             if (rdbComprador.Checked)
             {
-                idrol = 20;
+                rol.idrol = 20;
             }
             if (rdbVendedor.Checked)
             {
-                idrol = 30;
+                rol.idrol = 30;
             }
-            if (idrol == 0)
+            if (rol.idrol == 0)
             {
-                ok = false;
-                Mensaje.showWarning("Debe seleccionar un perfil para la cuenta");
+                Mensaje.showWarning("Debe seleccionar un tipo de cuenta");
+                return;
             }
-            if (ok)
+            try
             {
-                Persona persona = new Persona();
-                persona.nombre = nombre;
-                persona.apellido = apellido;
-                persona.correo = correo;
-                persona.telefono = telefono;
-                Usuario usuario = new Usuario();
-                usuario.username = username;
-                usuario.password = password;
-                persona.usuario = usuario;
-                Rol rol = new Rol();
-                rol.idrol = idrol;
-                usuario.rol = rol;
                 usuario.guardarUsuario();
                 persona.guardarPersona();
+                Close();
             }
+            catch(Exception ex)
+            {
+                Mensaje.showError(string.Format("Error: {0}", ex.Message));
+            }
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

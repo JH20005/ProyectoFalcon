@@ -17,6 +17,16 @@ namespace proyectoFalcon
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(txtUsername.Text))
+            {
+                Mensaje.showWarning("Debe ingresar un nombre de usuario");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                Mensaje.showWarning("Debe ingresar la contraseña");
+                return;
+            }
             existeUsuario();
             if (Sesion.getUsuarioLogueado() != null)
             {

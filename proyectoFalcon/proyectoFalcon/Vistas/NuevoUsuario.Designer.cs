@@ -46,6 +46,7 @@
             label2 = new Label();
             label1 = new Label();
             button1 = new Button();
+            label5 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,15 +54,15 @@
             // 
             panel1.Controls.Add(rdbVendedor);
             panel1.Controls.Add(rdbComprador);
-            panel1.Location = new Point(97, 314);
+            panel1.Location = new Point(98, 344);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 53);
+            panel1.Size = new Size(200, 27);
             panel1.TabIndex = 49;
             // 
             // rdbVendedor
             // 
             rdbVendedor.AutoSize = true;
-            rdbVendedor.Location = new Point(111, 20);
+            rdbVendedor.Location = new Point(111, 3);
             rdbVendedor.Name = "rdbVendedor";
             rdbVendedor.Size = new Size(75, 19);
             rdbVendedor.TabIndex = 1;
@@ -72,7 +73,7 @@
             // rdbComprador
             // 
             rdbComprador.AutoSize = true;
-            rdbComprador.Location = new Point(8, 20);
+            rdbComprador.Location = new Point(3, 3);
             rdbComprador.Name = "rdbComprador";
             rdbComprador.Size = new Size(86, 19);
             rdbComprador.TabIndex = 0;
@@ -171,6 +172,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(255, 128, 128);
+            button2.Cursor = Cursors.Hand;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
@@ -219,6 +221,7 @@
             // button1
             // 
             button1.BackColor = Color.Silver;
+            button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
@@ -231,11 +234,23 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(98, 316);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(129, 25);
+            label5.TabIndex = 51;
+            label5.Text = "Tipo de cuenta";
+            // 
             // NuevoUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(396, 450);
+            Controls.Add(label5);
             Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(label11);
@@ -282,5 +297,6 @@
         private Label label2;
         private Label label1;
         private Button button1;
+        private Label label5;
     }
 }
