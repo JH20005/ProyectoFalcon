@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoFalcon", "proyectoFalcon\proyectoFalcon.csproj", "{048D976B-AA6F-4B3D-B78C-8CE3FC18A5D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "proyectoFalcon", "proyectoFalcon\proyectoFalcon.csproj", "{048D976B-AA6F-4B3D-B78C-8CE3FC18A5D2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador SGIVAU", "Instalador SGIVAU\Instalador SGIVAU.vdproj", "{58C9DBA3-6D90-46D3-8BD1-4A47EAEE8112}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{048D976B-AA6F-4B3D-B78C-8CE3FC18A5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048D976B-AA6F-4B3D-B78C-8CE3FC18A5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048D976B-AA6F-4B3D-B78C-8CE3FC18A5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C9DBA3-6D90-46D3-8BD1-4A47EAEE8112}.Debug|Any CPU.ActiveCfg = Debug
+		{58C9DBA3-6D90-46D3-8BD1-4A47EAEE8112}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

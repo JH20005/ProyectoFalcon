@@ -19,10 +19,14 @@ namespace proyectoFalcon.Vistas
         public ConexionParametros()
         {
             InitializeComponent();
-            txtHost.Text = ConfigurationManager.AppSettings["host"];
+            /*txtHost.Text = ConfigurationManager.AppSettings["host"];
             txtbdName.Text = ConfigurationManager.AppSettings["name"];
             txtUser.Text = ConfigurationManager.AppSettings["user"];
-            txtPass.Text = ConfigurationManager.AppSettings["pass"];
+            txtPass.Text = ConfigurationManager.AppSettings["pass"];*/
+            txtHost.Text = "127.0.0.1";
+            txtbdName.Text = "falcon";
+            txtUser.Text = "root";
+            txtPass.Text = "admin";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +45,7 @@ namespace proyectoFalcon.Vistas
                 {
                     Mensaje.showInfo("Conexión exitosa");
                     this.Hide();
-                    changeConexionParametros();
+                    //changeConexionParametros();
                     Login login = new Login();
                     login.FormClosed += (s, args) => this.Close();
                     login.Show();
